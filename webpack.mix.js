@@ -11,7 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
+
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+mix.browserSync({
+    open: 'external',
+    host: 'coodescor.test',
+    proxy: 'coodescor.test',
+ files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php', 'public/js/*.js', 'public/css/*.css']
+});
