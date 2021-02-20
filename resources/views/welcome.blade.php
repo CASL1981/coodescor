@@ -135,7 +135,7 @@
 								</div>
 							</li>
 							<li class="nav-item mx-lg-4 my-lg-0 my-3">
-								<a class="nav-link" href="#">Contactanos</a>
+								<a class="nav-link" href="{{ url('contact') }}">Contactanos</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">PQRS</a>
@@ -351,6 +351,7 @@
 		</div>
 	</div> -->
 	<!-- //middle section -->
+	
 	<!-- social media vertical -->
 	<div class="social">
 		<ul>

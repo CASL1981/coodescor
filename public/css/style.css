@@ -182,7 +182,7 @@ div#home {
 
 .navbar-light .navbar-nav .nav-link {
     padding: 0;
-    color: #fff;
+    color: #c5d544;
     background: transparent;
     font-size: 16px;
     letter-spacing: 1px;
@@ -238,7 +238,7 @@ nav.fixed-navi ul li {
 /* //navigation */
 /* logo */
 a.navbar-brand {
-    color: #f44336;
+    color: #c5d544;
     font-size: 50px;
     padding: 0;
 }
@@ -247,11 +247,11 @@ a.navbar-brand {
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus,
 .w3l-footer h2 a span {
-    color: #f44336;
+    color: #c5d544;
 }
 
 a.navbar-brand span {
-    color: #fff;
+    color: #c5d544;
 }
 
 a.navbar-brand i,
@@ -961,7 +961,7 @@ a.w3_agile_google:hover {
 /* inner pages */
 /* about page */
 .inner-banner-w3ls {
-    background: url(../images/banner3.jpg) no-repeat center;
+    background: url(../images/banner4.png) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1501,11 +1501,12 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .contact-right-w3l input[type="submit"] {
-    background: #4078c0;
+    background: #005CE2;
     color: #fff;
     padding: 13px 26px;
     margin-top: 2em;
     border: none;
+    border-radius: 10px;
     outline: none;
     letter-spacing: 1px;
     font-size: 16px;
