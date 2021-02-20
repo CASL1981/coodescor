@@ -357,7 +357,7 @@
 			<li><a href="http://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a></li>
 			<li><a href="http://www.twitter.com" target="_blank" class="fab fa-twitter"></a></li>
 			<li><a href="http://www.googleplus.com" target="_blank" class="fab fa-google-plus-g"></a></li>
-			<li><a href="http://www.pinterest.com" target="_blank" class="fab fa-pinterest"></a></li>			
+			<li><a href="http://www.pinterest.com" target="_blank" class="fab fa-instagram"></a></li>			
 		</ul>
 	</div>
 	<!-- end social media vertical -->
@@ -453,25 +453,18 @@
 
 	<!-- blog -->
 	<div class="blog-w3ls" id="blog">
-		<div class="mr-5 ml-5 py-xl-5 py-lg-3">
+		<div class="container py-xl-5 py-lg-3">
 			<div class="w3ls-titles text-center mb-5">
 				<h3 class="title text-white">Notas de Interes</h3>
 				<span>
 					<i class="fas fa-user-md text-white"></i>
 				</span>
-				<div class="row">
-					<div class="col-md-6">
-						<h4 class="title text-white">Blog</h4>
-					</div>
-					<div class="col-md-6">
-						<h4 class="title text-white">Noticias</h4>
-					</div>
-				</div>
+				<h3 class="title text-white">Noticias</h3>
 				<!-- <p class="mt-2 text-white">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 			</div>
 			<!-- blog -->
 			<div class="row package-grids mt-5">
-				<div class="col-md-2 pricing">
+				<div class="col-md-4 pricing">
 					<div class="price-top">
 						<a href="single.html">
 							<img src="images/blog1.jpg" alt="" class="img-fluid" />
@@ -481,12 +474,12 @@
 						</h3>
 					</div>
 					<div class="price-bottom p-4">
-						<h4 class="text-dark mb-3">Titulo Post 1</h4>
+						<h4 class="text-dark mb-3">Titulo Noticia 1</h4>
 						<a href="single.html">
 							<i class="fas fa-user mr-2"></i>Posted by accusantium</a>
 					</div>
 				</div>
-				<div class="col-md-2 pricing my-md-0 my-5">
+				<div class="col-md-4 pricing my-md-0 my-5">
 					<div class="price-top">
 						<a href="single.html">
 							<img src="images/blog2.jpg" alt="" class="img-fluid" />
@@ -496,57 +489,12 @@
 						</h3>
 					</div>
 					<div class="price-bottom p-4">
-						<h4 class="text-dark mb-3">Titulo Post 2</h4>
+						<h4 class="text-dark mb-3">Titulo Noticia 2</h4>
 						<a href="single.html">
 							<i class="fas fa-user mr-2"></i>Posted by accusantium</a>
 					</div>
 				</div>
-				<div class="col-md-2 pricing">
-					<div class="price-top">
-						<a href="single.html">
-							<img src="images/blog3.jpg" alt="" class="img-fluid" />
-						</a>
-						<h3>30
-							<span>August</span>
-						</h3>
-					</div>
-					<div class="price-bottom p-4">
-						<h4 class="text-dark mb-3">Noticia 1</h4>
-						<a href="single.html">
-							<i class="fas fa-user mr-2"></i>Posted by accusantium</a>
-					</div>
-				</div>
-				<div class="col-md-2 pricing">
-					<div class="price-top">
-						<a href="single.html">
-							<img src="images/blog1.jpg" alt="" class="img-fluid" />
-						</a>
-						<h3>13
-							<span>August</span>
-						</h3>
-					</div>
-					<div class="price-bottom p-4">
-						<h4 class="text-dark mb-3">Titulo Post 1</h4>
-						<a href="single.html">
-							<i class="fas fa-user mr-2"></i>Posted by accusantium</a>
-					</div>
-				</div>
-				<div class="col-md-2 pricing my-md-0 my-5">
-					<div class="price-top">
-						<a href="single.html">
-							<img src="images/blog2.jpg" alt="" class="img-fluid" />
-						</a>
-						<h3>24
-							<span>August</span>
-						</h3>
-					</div>
-					<div class="price-bottom p-4">
-						<h4 class="text-dark mb-3">Titulo Post 2</h4>
-						<a href="single.html">
-							<i class="fas fa-user mr-2"></i>Posted by accusantium</a>
-					</div>
-				</div>
-				<div class="col-md-2 pricing">
+				<div class="col-md-4 pricing">
 					<div class="price-top">
 						<a href="single.html">
 							<img src="images/blog3.jpg" alt="" class="img-fluid" />
@@ -568,7 +516,7 @@
 		<div class="container py-xl-5 py-lg-3">
 			<div class="w3ls-titles text-center mb-5">
 				
-				<h3 class="title text-white">Noticias</h3>
+				<h3 class="title text-white">Blog</h3>
 				
 			</div>
 			<!-- blog -->
@@ -613,7 +561,7 @@
 						</h3>
 					</div>
 					<div class="price-bottom p-4">
-						<h4 class="text-dark mb-3">Noticia 1</h4>
+						<h4 class="text-dark mb-3">Post 3</h4>
 						<a href="single.html">
 							<i class="fas fa-user mr-2"></i>Posted by accusantium</a>
 					</div>
@@ -631,19 +579,17 @@
 				<h3 class="title">Nosotros</h3>				
 			</div>
 			<div class="row">
-				<div class="col-lg-6 ">
-					<!-- <img src="images/b5.png" alt="" class="img-fluid"> -->
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/nExpesRf_us?controls=0" 
-					frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-					</iframe>
+				<div class="col-lg-6">
+					<div class="video-institucional">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/nExpesRf_us?controls=0" 
+						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						</iframe>
+					</div>
 				</div>
 				<div class="col-lg-6">
 					<a class="twitter-timeline" data-lang="es" data-width="550" data-height="300" href="https://twitter.com/coodescor?ref_src=twsrc%5Etfw">Tweets by coodescor</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 			</div>
-			<!-- <div class="row">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.417372103258!2d-75.87448038551621!3d8.74674159371697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2fdf3e85a795%3A0xbf48873bada6c41e!2sCoodescor%20(%20Venta%20de%20medicamentos%20y%20dispositivos%20m%C3%A9dicos%20)!5e0!3m2!1ses-419!2sco!4v1610936615137!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-			</div> -->
 		</div>
 	</div>
 			
