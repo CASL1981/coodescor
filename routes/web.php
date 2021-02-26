@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::view('/contact', 'pages/contact', ['name' => 'contact']);
+Route::view('/contact', 'pages/blog', ['name' => 'contact']);
+Route::view('/blog', 'pages/blog', ['name' => 'blog']);

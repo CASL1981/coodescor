@@ -129,7 +129,7 @@
 
 									<a class="dropdown-item scroll" href="#">Servicios</a>
 									<a class="dropdown-item" href="#">Asociados</a>
-									<a class="dropdown-item scroll" href="#">Blog</a>
+									<a class="dropdown-item scroll" href="{{ url('blog') }}">Blog</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Noticias</a>
 								</div>
