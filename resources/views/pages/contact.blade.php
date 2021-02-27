@@ -132,16 +132,16 @@
 
 									<a class="dropdown-item" href="index.html">Services</a>
 									<a class="dropdown-item" href="gallery.html">Gallery</a>
-									<a class="dropdown-item" href="index.html">Blog</a>
+									<a class="dropdown-item" href="{{ route('blog') }}">Blog</a>
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="single.html">Single Page</a>
+									<a class="dropdown-item" href="#">Single Page</a>
 								</div>
 							</li>
 							<li class="nav-item mx-lg-4 my-lg-0 my-3">
 								<a class="nav-link" href="appointment.html">Appointment</a>
 							</li>
 							<li class="nav-item active">
-								<a class="nav-link" href="contact.html">Contact Us</a>
+								<a class="nav-link" href="{{ route('contact') }}">Contacto</a>
 							</li>
 						</ul>
 						<!-- login -->
@@ -416,7 +416,7 @@
 	<!--  necessary snippets for few javascript files -->
 	<script src="js/medic.js"></script>
 
-	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- //Js files -->

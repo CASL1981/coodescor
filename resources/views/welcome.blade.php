@@ -129,13 +129,13 @@
 
 									<a class="dropdown-item scroll" href="#">Servicios</a>
 									<a class="dropdown-item" href="#">Asociados</a>
-									<a class="dropdown-item scroll" href="{{ url('blog') }}">Blog</a>
+									<a class="dropdown-item scroll" href="{{ route('blog') }}">Blog</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Noticias</a>
 								</div>
 							</li>
 							<li class="nav-item mx-lg-4 my-lg-0 my-3">
-								<a class="nav-link" href="{{ url('contact') }}">Contactanos</a>
+								<a class="nav-link" href="{{ route('contact') }}">Contactanos</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">PQRS</a>
