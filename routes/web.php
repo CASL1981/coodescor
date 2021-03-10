@@ -25,3 +25,4 @@ Route::get('/', [PagesController::class, 'Home'])->name('home');
 Route::get('/blog', [PagesController::class, 'Blog'])->name('blog');
 Route::get('/contacto', [PagesController::class, 'Contact'])->name('contact');
 Route::get('/blog/post', [PagesController::class, 'Post'])->name('blog.post');
+Route::get('/about', [PagesController::class, 'About'])->name('about');

@@ -119,7 +119,7 @@
 								</a>
 							</li>
 							<li class="nav-item mx-lg-4 my-lg-0 my-3">
-								<a class="nav-link" href="#">Nosotros</a>
+								<a class="nav-link" href="{{ route('about') }}">Nosotros</a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
