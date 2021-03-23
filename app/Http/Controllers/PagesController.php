@@ -30,4 +30,9 @@ class PagesController extends Controller
     {
         return view('pages.about');
     }
+
+    public function partner()
+    {
+        return view('pages.partner');
+    }
 }
