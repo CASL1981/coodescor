@@ -35,4 +35,9 @@ class PagesController extends Controller
     {
         return view('pages.partner');
     }
+
+    public function services()
+    {
+        return view('pages.services');
+    }
 }

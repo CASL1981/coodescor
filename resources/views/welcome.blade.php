@@ -127,9 +127,9 @@
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-									<a class="dropdown-item scroll" href="#">Servicios</a>
+									<a class="dropdown-item" href="{{ route('services') }}">Servicios</a>
 									<a class="dropdown-item" href="{{ route('partner') }}">Asociados</a>
-									<a class="dropdown-item scroll" href="{{ route('blog') }}">Blog</a>
+									<a class="dropdown-item" href="{{ route('blog') }}">Blog</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Noticias</a>
 								</div>
