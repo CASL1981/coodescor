@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function Home()
     {
-        return view('welcome');
+        return view('pages.home');
     }
 
     public function blog()
@@ -39,5 +39,15 @@ class PagesController extends Controller
     public function services()
     {
         return view('pages.services');
+    }
+
+    public function PQRS()
+    {
+        return view('pages.pqrs');
+    }
+
+    public function news()
+    {
+        return view('pages.news');
     }
 }

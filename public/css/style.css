@@ -171,7 +171,8 @@ div#home {
     position: absolute;
     z-index: 999;
     width: 100%;
-    background: rgba(255, 255, 255, 0.26);
+    background: rgba(0, 92, 226, 0.4);
+    /* background: rgba(255, 255, 255, 0.26); */
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
     -webkit-transition: background-color .1s ease-in-out;
     -moz-transition: background-color .1s ease-in-out;
@@ -318,7 +319,7 @@ p.account-w3ls a {
 .form-group label {
     font-size: 15px;
     letter-spacing: 1px;
-    color: #fff;
+    color: #005ce2;
     margin-bottom: 8px;
     text-align: right;
     display: block;

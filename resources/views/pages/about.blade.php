@@ -1,226 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('layout')
 
-<head>
-    <title>Coodescor | Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Medication a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script>
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-
-    </script>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
-    <link href="css/blog.css" rel='stylesheet' type='text/css' />
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-</head>
-
-<body>
-<!-- header -->
-<header>
-    <!-- top-bar -->
-    <div class="top-bar py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 top-social-agile">
-                    <div class="row">
-                        <!-- social icons -->
-                        <ul class="col-lg-4 col-6 top-right-info text-center">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                            <li class="ml-3">
-                                <a href="#">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- //social icons -->
-                        <div class="col-6 header-top_w3layouts pl-3 text-lg-left text-center">
-                            <p class="text-white">
-                                <i class="fas fa-map-marker-alt mr-2"></i>Parma Via Modena,BO, Italy</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 top-social-agile text-lg-right text-center">
-                    <div class="row">
-                        <div class="col-lg-7 col-6 top-w3layouts">
-                            <p class="text-white">
-                                <i class="far fa-envelope-open mr-2"></i>
-                                <a href="mailto:info@example.com" class="text-white">info@example.com</a>
-                            </p>
-                        </div>
-                        <div class="col-lg-5 col-6 header-w3layouts pl-4 text-lg-left">
-                            <p class="text-white">
-                                <i class="fas fa-phone mr-2"></i>+1 000263676</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- //top-bar -->
-
-<!-- header 2 -->
-<div id="home">
-    <!-- navigation -->
-    <div class="main-top py-1">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-navi">
-            <div class="container">
-                <!-- logo -->
-                <!-- <h1>
-                    <a class="navbar-brand font-weight-bold font-italic" href="index.html">
-                        <span>M</span>edic
-                        <i class="fas fa-syringe"></i>
-                    </a>
-                </h1> -->
-                <!-- //logo -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item mt-lg-0 mt-3">
-                            <a class="nav-link" href="{{ route('home') }}">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-lg-4 my-lg-0 my-3 active">
-                            <a class="nav-link" href="about.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Pages
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                                <a class="dropdown-item" href="index.html">Services</a>
-                                <a class="dropdown-item" href="gallery.html">Gallery</a>
-                                <a class="dropdown-item" href="{{ route('blog') }}">Blog</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('blog.post') }}">Single Page</a>
-                            </div>
-                        </li>
-                        <li class="nav-item mx-lg-4 my-lg-0 my-3">
-                            <a class="nav-link" href="appointment.html">Appointment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
-                        </li>
-                    </ul>
-                    <!-- login -->
-                    <a href="#" class="login-button ml-lg-5 mt-lg-0 mt-4 mb-lg-0 mb-3" data-toggle="modal" data-target="#exampleModalCenter1">
-                        <i class="fas fa-sign-in-alt mr-2"></i>Login</a>
-                    <!-- //login -->
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- //navigation -->
-    <!-- modal -->
-    <!-- login -->
-    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="login px-4 mx-auto mw-100">
-                        <h5 class="text-center mb-4">Login Now</h5>
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label>Your Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="" required="">
-                            </div>
-                            <div class="form-group">
-                                <label class="mb-2">Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="" required="">
-                            </div>
-                            <button type="submit" class="btn submit mb-4">Login</button>
-                            <p class="forgot-w3ls text-center pb-4">
-                                <a href="#" class="text-white">Forgot your password?</a>
-                            </p>
-                            <p class="account-w3ls text-center pb-4">
-                                Don't have an account?
-                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter2">Create one now</a>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //login -->
-    <!-- register -->
-    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content modal-content-2">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="login px-4 mx-auto mw-100">
-                        <h5 class="text-center mb-4">Register Now</h5>
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label>Your Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="" required="">
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" class="form-control" name="email" placeholder="" required="">
-                            </div>
-                            <div class="form-group">
-                                <label class="mb-2">Password</label>
-                                <input type="password" class="form-control" name="password" id="password1" placeholder="" required="">
-                            </div>
-                            <div class="form-group">
-                                <label>Confirm Password</label>
-                                <input type="password" class="form-control" name="password" id="password2" placeholder="" required="">
-                            </div>
-                            <button type="submit" class="btn btn-primary submit mb-4">Register</button>
-                            <p class="text-center pb-2">
-                                <a href="#" class="text-white">By clicking Register, I agree to your terms</a>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //register -->
-    <!-- //modal -->
-</div>
-<!-- //header 2 -->
+@section('content')
 
 <!-- banner 2 -->
 <div class="inner-banner-w3ls">
@@ -242,64 +22,69 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //page details -->
 
-<!-- social media vertical -->
-<div class="social">
-    <ul>
-        <li><a href="http://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a></li>
-        <li><a href="http://www.twitter.com" target="_blank" class="fab fa-twitter"></a></li>
-        <li><a href="http://www.googleplus.com" target="_blank" class="fab fa-google-plus-g"></a></li>
-        <li><a href="http://www.pinterest.com" target="_blank" class="fab fa-instagram"></a></li>			
-    </ul>
-</div>
-<!-- end social media vertical -->
-
-
-	<!-- about -->
+<!-- about -->
 	<section class="about">
 		<div class="container">
-			<div class="w3ls-titles text-center mb-md-5 mb-4">
-				<h3 class="title">Quienes Somos</h3>
+			<div class="w3ls-titles text-center mb-md-5 mb-4 welcome-left">
+				<h3 >Quienes Somos</h3>
 				<span>
-					<i class="fas fa-user-md"></i>
+					<i class="fas fa-pills"></i>
 				</span>
 			</div>
 			<p class="aboutpara text-center mx-auto">La Cooperativa de Entidades de Salud de Córdoba “COODESCOR” es una empresa sin ánimo de lucro creada bajo 
 				la forma de Administración Pública Cooperativa y dedicada a la gestión de Insumos Hospitalarios Esenciales.</p>
 
-			<div class="row about_grids mt-5">
-				<div class="col-lg-4">
+			<div class="row about_grids mt-5 mb-5">
+				<div class="col-lg-4" style="background: #D0e3f5;">
 					{{-- <img src="images/blog1.jpg" alt="" class="img-fluid" /> --}}
-					<h3 class="mt-3 text-dark">MISIÓN</h3>
+					<strong><h3 class="mt-3 text-dark text-center">MISIÓN</h3></strong>
 					<p class="my-3">Ofrecemos soluciones integrales en la comercialización y gestión de insumos hospitalarios esenciales que generen un alto valor agregado a nuestros asociados y clientes con adecuado soporte tecnológico y talento humano competente y ético.</p>
 					{{-- <a href="single.html">Read More</a> --}}
 				</div>
-				<div class="col-lg-4 my-lg-0 my-5">
+				<div class="col-lg-4 ml-3" style="background: #D0e3f5;">
 					{{-- <img src="images/blog2.jpg" alt="" class="img-fluid" /> --}}
-					<h3 class="mt-3 text-dark">VISIÓN</h3>
-					<p class="my-3">Ser una empresa competitiva y sostenible, reconocida por sus asociados y clientes no asociados  como el principal aliado estratégico que favorece y fortalece la prestación del servicio.</p>
+					<h3 class="mt-3 text-center">VISIÓN</h3>
+					<p class="my-3 text-black">Ser una empresa competitiva y sostenible, reconocida por sus asociados y clientes no asociados  como el principal aliado estratégico que favorece y fortalece la prestación del servicio.</p>
 					{{-- <a href="single.html">Read More</a> --}}
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-3 ml-3" style="background: #D0e3f5;">
 					{{-- <img src="images/blog3.jpg" alt="" class="img-fluid" /> --}}
-					<h3 class="mt-3 text-dark">VALORES</h3>
-					<p >Responsabilidad</p><br>
-					<p >Compromiso</p><br>
-					<p >Transparencia</p><br>
-					<p >Solidaridad</p><br>
-					<p >Ética</p><br>
+					<h3 class="mt-3 text-center">VALORES</h3>
+					<p >Responsabilidad</p>
+					<p >Compromiso</p>
+					<p >Transparencia</p>
+					<p >Solidaridad</p>
+					<p >Ética</p>
 					{{-- <a href="single.html">Read More</a> --}}
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- //about -->
+	
+	<!-- banner bottom -->
+	<div class="banner-bottom py-5">
+		<div class="d-flex container py-xl-3 py-lg-3">
+			<div class="banner-left-bottom-w3ls offset-lg-2 offset-md-1">
+				<h3 class="text-white my-3">Historia</h3>
+				<p class="text-justify">En diciembre de 1996 el Servicio seccional de salud de Córdoba preocupado por el alto costo de los insumos hospitalarios esenciales, comparte con los hospitales del departamento la idea de crear mecanismos para optimizar la adquisición de estos insumos; llevando a la Asamblea Departamental el interés de crear una Administración Pública Cooperativa que se encargue de tal fin. A través de la ordenanza Nº 43 de diciembre 13 de 1996 se le da vida jurídica a esta empresa de Economía Solidaria, inscrita en la Cámara de Comercio de Montería el 5 de Junio de 1997 bajo el número 00000608 del libro I de las personas jurídicas sin animo de lucro.</p><br>
+				<p class="text-justify">Es así como nace La Cooperativa de entidades de Salud de Córdoba “COODESCOR”, una persona jurídica de derecho privado, creada como empresa de bienes y servicios en la forma de administración publica cooperativa, de responsabilidad limitada, numero de entidades asociadas y patrimonio social variable e ilimitado, regida por las disposiciones legales vigentes en Colombia, la doctrina cooperativa y los estatutos.</p>
+			</div>
+			{{-- <div class="button">
+				<a href="about.html" class="w3ls-button-agile">Read More
+					<i class="fas fa-hand-point-right"></i>
+				</a>
+			</div> --}}
+		</div>
+	</div>
+	<!-- //banner bottom -->
 
 	<!-- middle section -->
 	<div class="w3ls-welcome py-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 welcome-right py-4">
-					<img src="images/farmacia.jpg" alt=" " class="img-fluid">
+					<img src="images/mapacordoba.png" alt=" " class="img-fluid">
 				</div>
 				<div class="col-lg-7 welcome-left mt-4">
 					<h3>Nuestros Servicios Farmaceuticos</h3>
@@ -404,26 +189,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</section> --}}
 	<!-- team -->
 
-	<!-- banner bottom -->
-	<div class="banner-bottom py-5">
-		<div class="d-flex container py-xl-3 py-lg-3">
-			<div class="banner-left-bottom-w3ls offset-lg-2 offset-md-1">
-				<h6 class="text-white">Sed do eiusmod tempor</h6>
-				<h3 class="text-white my-3">Garntia de Eficiencia y Calidad</h3>
-				<p>all specialists have extensive practical experience and regularly training courses in educational centers of the
-					world</p>
-			</div>
-			{{-- <div class="button">
-				<a href="about.html" class="w3ls-button-agile">Read More
-					<i class="fas fa-hand-point-right"></i>
-				</a>
-			</div> --}}
-		</div>
-	</div>
-	<!-- //banner bottom -->
 
 	<!-- services -->
-	<div class="why-choose-agile" id="services">
+	{{-- <div class="why-choose-agile" id="services">
 		<div class="container pt-xl-5 pt-lg-3">
 			<div class="w3ls-titles text-center mb-5">
 				<h3 class="title">Nuestros Servicios</h3>
@@ -508,115 +276,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
+
+	@include('partials.services')
 	<!-- //services -->
 
-<!-- footer -->
-<footer>
-	<div class="w3ls-footer-grids pt-sm-4 pt-3">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="row">
-				<div class="col-md-4 w3l-footer">
-					<h2 class="mb-sm-3 mb-2">
-						<a href="index.html" class="text-white font-italic font-weight-bold">
-							<span>C</span>oodescor
-							<i class="fas fa-syringe ml-2"></i>
-						</a>
-					</h2>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-						aperiam,
-						eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-				</div>
-				<div class="col-md-4 w3l-footer my-md-0 my-4">
-					<h3 class="mb-sm-3 mb-2 text-white">Address</h3>
-					<ul class="list-unstyled">
-						<li>
-							<i class="fas fa-location-arrow float-left"></i>
-							<p class="ml-4">Cooperativa de Entidades de Salud de Cordoba
-								<span>Lorem ipsum dolor,</span>Monteria,Calle 28A # 23 -03 Barrio San Jóse. </p>
-							<div class="clearfix"></div>
-						</li>
-						<li class="my-3">
-							<i class="fas fa-phone float-left"></i>
-							<p class="ml-4">(4) 7918080</p>
-							<div class="clearfix"></div>
-						</li>
-						<li>
-							<i class="far fa-envelope-open float-left"></i>
-							<a href="mailto:info@example.com" class="ml-3">mail@example.com</a>
-							<div class="clearfix"></div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-4 w3l-footer">
-					<h3 class="mb-sm-3 mb-2 text-white">Links Rapidos</h3>
-					<div class="nav-w3-l">
-						<ul class="list-unstyled">
-							<li>
-								<a href="index.html">Inicio</a>
-							</li>
-							<li class="mt-2">
-								<a href="about.html">Asociados</a>
-							</li>
-							<li class="mt-2">
-								<a href="gallery.html">Blog</a>
-							</li>
-							<li class="mt-2">
-								<a href="appointment.html">Noticias</a>
-							</li>
-							<li class="mt-2">
-								<a href="contact.html">Contactanos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="border-top mt-5 pt-lg-4 pt-3 pb-lg-0 pb-3 text-center">
-				<p class="copy-right-grids mt-lg-1">© 2018 Medic. All Rights Reserved | Design by
-					<a href="https://w3layouts.com/" target="_blank">W3layouts</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- //footer -->
-
-<!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script>
-<!-- fixed navigation -->
-<script src="js/fixed-nav.js"></script>
-<!-- //fixed navigation -->
-
-<!-- smooth scrolling -->
-<script src="js/SmoothScroll.min.js"></script>
-<!-- move-top -->
-<script src="js/move-top.js"></script>
-<!-- easing -->
-<script src="js/easing.js"></script>
-<!--  necessary snippets for few javascript files -->
-<script src="js/medic.js"></script>
-
-<script src="js/bootstrap.min.js"></script>
-<!-- Necessary-JavaScript-File-For-Bootstrap -->
-<script>
-	jQuery(document).ready(function ($) {
-		$(".scroll").click(function (event) {
-			event.preventDefault();
-			$('html,body').animate({
-				scrollTop: $(this.hash).offset().top
-			}, 900);
-		});
-	});
-</script>
-<script>
-	$(document).ready(function () {
-		$().UItoTop({
-			easingType: 'easeOutQuart'
-		});
-
-	});
-</script>
-<!--// end-smoth-scrolling -->
-</body>
-
-</html>
+	@endsection

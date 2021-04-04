@@ -1,3 +1,8 @@
+.text-color-blue{
+    color: #005ce2;
+}
+
+
 /* partner */
 .container-partner
 {
@@ -115,7 +120,7 @@
     justify-content: center;
     align-items: center;
     min-height: 80%;
-    background: #005ce2;
+    /* background: #005ce2; */
 }
 
 .container-services
@@ -168,7 +173,7 @@
 
 .container-services .card-services .content-services .contentBx-services h3
 {
-    color: #fff;
+    color: #005ce2;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
@@ -220,9 +225,54 @@
 
 .container-services .card-services .content-services .sci li a
 {
-    color: #fff;
+    color: #005ce2;
     font-size: 24px;
 
 }
 
 /* end services */
+
+/* details services */
+.agileits-about-grids h4 {
+	text-transform: capitalize;
+	font-weight: 600;
+	color: #000;
+	font-size: 1.3em;
+}
+
+.agileits-about-grids i {
+	font-size: 3em;
+	margin-bottom: 10px;
+	color: #aad0ec;
+}
+
+.agileits-about-grids p {
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+.agileits-about-grids:nth-child(3) i {
+	color: #0fb492;
+}
+
+.agileits-about-grids:nth-child(2) i {
+	color: #f5ac43;
+}
+
+.agileits-about-grids:nth-child(1) i {
+	color: #634271;
+}
+
+.agileits-about-grids:nth-child(1) .col-label i {
+	color: #00ddd8;
+}
+
+.agileits-about-grids:nth-child(2) .col-label i {
+	color: #8cc540;
+}
+
+.agileits-about-grids:nth-child(3) .col-label i {
+	color: #ec408c;   
+}
+
+/* end details services */

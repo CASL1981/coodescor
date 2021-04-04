@@ -16,18 +16,17 @@
             <li class="breadcrumb-item">
                 <a href="{{ route('home') }}">Home</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            <li class="breadcrumb-item active" aria-current="page">Noticias</li>
         </ol>
     </div>
 </div>
 <!-- //page details -->
 
   <!-- blog -->
-    <section class="banner-bottom-w3layouts py-lg-5 py-md-5 py-3">
+    <section class="banner-bottom-w3layouts">
         <div class="container">
-            <div class="inner-sec-w3ls py-lg-5  py-3">
-                <h3 class="tittle-wthree text-center mb-lg-5 mb-3">
-                    <span>Nuestro</span> Blog</h3>
+            <div class="inner-sec-w3ls py-lg-3 welcome-left">
+                <h3 class="tittle-wthree text-center mb-lg-5 mb-3">Noticias</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <!--left-->
                     <div class="col-lg-8 left-blog-info text-left">
