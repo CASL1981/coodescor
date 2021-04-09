@@ -19,7 +19,7 @@
 
         <!-- Custom-Files -->
         
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <!-- Bootstrap-Core-CSS -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
 		<link rel="stylesheet" href="{{ asset('css/blog.css') }}" type="text/css" media="all" />
@@ -36,7 +36,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
             rel="stylesheet">
         <!-- //Web-Fonts -->
-		{{-- <script src="https://use.fontawesome.com/8313c77f9c.js"></script> --}}
+		
     </head>
     <body>
     <!-- header -->
@@ -62,15 +62,32 @@
 	<!-- Default-JavaScript-File -->
 
 	<!-- banner slider -->
-	<script src="js/responsiveslides.min.js"></script>   
-	<!-- js -->
-    
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: true,
+				speed: 1000,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+		});
+	</script>
+	<!-- //banner slider -->
+
 	<!-- fixed navigation -->
 	<script src="js/fixed-nav.js"></script>
 	<!-- //fixed navigation -->
 
 	<!-- smooth scrolling -->
-	<script src="js/SmoothScroll.min.js"></script>
+	<!-- <script src="js/SmoothScroll.min.js"></script> -->
 	<!-- move-top -->
 	<script src="js/move-top.js"></script>
 	<!-- easing -->
@@ -80,25 +97,5 @@
 
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-	<script>
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 900);
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
-        });
-    </script>
-    <!--// end-smoth-scrolling -->
-	<!-- //Js files -->
     </body>
 </html>

@@ -24,3 +24,8 @@ Route::get('/partner', [PagesController::class, 'Partner'])->name('partner');
 Route::get('/services', [PagesController::class, 'Services'])->name('services');
 Route::get('/pqrs', [PagesController::class, 'PQRS'])->name('pqrs');
 Route::get('/news', [PagesController::class, 'News'])->name('news');
+Auth::routes();
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

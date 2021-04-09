@@ -1,4 +1,3 @@
-
 body {
     padding: 0;
     margin: 0;
@@ -84,8 +83,12 @@ a:hover {
     outline: none
 }
 
+
 /*-- //Reset Code --*/
+
+
 /*-- bottom-to-top --*/
+
 #toTop {
     display: none;
     text-decoration: none;
@@ -112,14 +115,22 @@ a:hover {
     filter: alpha(opacity=0);
 }
 
+
 /*-- //bottom-to-top --*/
+
+
 /* header */
+
+
 /* top bar */
+
 .top-bar {
     background: #005CE2;
 }
 
+
 /* social icons */
+
 .top-right-info li i {
     color: #fff;
     transition: 0.5s all;
@@ -143,7 +154,9 @@ a:hover {
     display: inline-block;
 }
 
+
 /* //social icons */
+
 .header-top_w3layouts p,
 .header-w3layouts p,
 .top-w3layouts p {
@@ -160,9 +173,15 @@ a:hover {
     opacity: .7;
 }
 
+
 /* //top bar */
+
+
 /* header 2 */
+
+
 /* navigation */
+
 div#home {
     position: relative;
 }
@@ -200,10 +219,12 @@ div#home {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-    color: #f44336;
+    color: #005ce2;
 }
 
+
 /* fixed nav */
+
 nav.fixed-navi ul {
     list-style: none;
     margin: 0;
@@ -214,7 +235,9 @@ nav.fixed-navi ul li {
     float: left;
 }
 
+
 /*helper*/
+
 .isFixed {
     position: fixed;
     top: 0;
@@ -235,9 +258,15 @@ nav.fixed-navi ul li {
     transition: background-color .1s ease-in-out;
 }
 
+
 /* //fixed nav */
+
+
 /* //navigation */
+
+
 /* logo */
+
 a.navbar-brand {
     color: #c5d544;
     font-size: 50px;
@@ -261,8 +290,12 @@ a.navbar-brand i,
     font-size: 22px;
 }
 
+
 /* //logo */
+
+
 /* login button */
+
 a.login-button {
     color: #fff;
     letter-spacing: 1px;
@@ -277,8 +310,12 @@ a.login-button:hover {
     background: #f44336;
 }
 
+
 /* //login button */
+
+
 /* modal */
+
 .modal-content {
     background: url(../images/bg1.jpg) no-repeat left;
     background-size: cover;
@@ -349,9 +386,15 @@ button.submit:hover {
     -ms-transition: 0.5s all;
 }
 
+
 /* //modal */
+
+
 /* //header 2 */
+
+
 /* banner */
+
 .banner-top1,
 .banner-top2,
 .banner-top3,
@@ -433,8 +476,12 @@ a.w3ls-button-agile:hover {
     color: #fff !important;
 }
 
+
 /* //banner */
+
+
 /* responsive slide */
+
 #slider2,
 #slider3 {
     box-shadow: none;
@@ -606,7 +653,9 @@ a.w3ls-button-agile:hover {
     margin: 5px 0px;
 }
 
+
 /*----*/
+
 .callbacks_tabs a {
     visibility: hidden;
 }
@@ -632,8 +681,12 @@ a.w3ls-button-agile:hover {
     background: #f44336;
 }
 
+
 /* //responsive slide */
+
+
 /* banner bottom */
+
 .banner-bottom.py-5 {
     background: url(../images/bg1.jpg) no-repeat top;
     background-size: cover;
@@ -680,8 +733,12 @@ h6.text-white {
     font-size: 14px;
 }
 
+
 /* //banner bottom */
+
+
 /* middle */
+
 .w3ls-welcome {
     background: url(../images/bg2.jpg) no-repeat center fixed;
     background-size: cover;
@@ -715,9 +772,15 @@ h6.text-white {
     border-color: #f44336;
 }
 
+
 /* //middle */
+
+
 /* services */
+
+
 /* heading title */
+
 h3.title {
     color: #000;
     font-size: 42px;
@@ -748,12 +811,14 @@ h3.title {
 }
 
 .w3ls-titles i {
-    color: #f44336;
+    color: #005CE2;
     font-size: 26px;
     margin-top: 5px;
 }
 
+
 /* //heading title */
+
 .agile-why-text-2 {
     border: 1px solid #969595;
     padding: 25px;
@@ -780,8 +845,12 @@ h3.title {
     margin-top: 1.2em;
 }
 
+
 /* //services */
+
+
 /* blog */
+
 .blog-w3ls {
     background: url(../images/bg4.jpg) no-repeat center;
     background-size: cover;
@@ -851,8 +920,12 @@ h3.title {
     color: #000;
 }
 
+
 /* //blog */
+
+
 /* treatments */
+
 .screen-agile i {
     background: #f44336;
     color: #fff;
@@ -868,8 +941,12 @@ h3.title {
     font-size: 26px;
 }
 
+
 /* //treatments */
+
+
 /* footer */
+
 footer {
     background: url(../images/bg3.jpg) no-repeat center fixed;
     background-size: cover;
@@ -901,7 +978,9 @@ footer {
     line-height: 2;
 }
 
+
 /* copyright */
+
 p.copy-right-grids {
     font-size: 14px;
     color: #fff;
@@ -916,8 +995,12 @@ p.copy-right-grids a:hover {
     color: #fff;
 }
 
+
 /* //copyright */
+
+
 /* social-icons */
+
 .agileits_social_list li {
     display: inline-block;
 }
@@ -957,10 +1040,18 @@ a.w3_agile_google:hover {
     border-color: #F44336;
 }
 
+
 /* //social-icons */
+
+
 /* //footer */
+
+
 /* inner pages */
+
+
 /* about page */
+
 .inner-banner-w3ls {
     background: url(../images/banner4.png) no-repeat center;
     background-size: cover;
@@ -971,7 +1062,9 @@ a.w3_agile_google:hover {
     height: 20vw;
 }
 
+
 /* page details */
+
 .breadcrumb li a {
     color: #f44336;
 }
@@ -981,8 +1074,12 @@ a.w3_agile_google:hover {
     color: #000;
 }
 
+
 /* //page details */
+
+
 /* about */
+
 .about p.aboutpara {
     font-size: 16px;
     max-width: 900px;
@@ -1003,8 +1100,12 @@ a.w3_agile_google:hover {
     color: #4575bd;
 }
 
+
 /* about */
+
+
 /* team */
+
 .team-grids {
     position: relative;
     overflow: hidden;
@@ -1071,10 +1172,14 @@ a.w3_agile_google:hover {
 /* Social media flotante */
 
 .social {
-	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	left: 0; /* Establecemos la barra en la izquierda */
-	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
-	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+    position: fixed;
+    /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+    left: 0;
+    /* Establecemos la barra en la izquierda */
+    top: 200px;
+    /* Bajamos la barra 200px de arriba a abajo */
+    z-index: 2000;
+    /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 
 .social ul {
@@ -1083,56 +1188,82 @@ a.w3_agile_google:hover {
 
 .social ul li a {
     display: inline-block;
-    color:#fff;
+    color: #fff;
     background: #000;
     width: 50px;
     padding: 10px 15px;
     text-decoration: none;
-    -webkit-transition:all 500ms ease;
-    -o-transition:all 500ms ease;
-    transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    /* Establecemos una transición a todas las propiedades */
 }
 
-.social ul li .fa-facebook-f {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
-.social ul li .fa-twitter {background: #00abf0;}
-.social ul li .fa-google-plus-g {background: #d95232;}
-.social ul li .fa-instagram {background: #3f729b;}
+.social ul li .fa-facebook-f {
+    background: #3b5998;
+}
+
+
+/* Establecemos los colores de cada red social, aprovechando su class */
+
+.social ul li .fa-twitter {
+    background: #00abf0;
+}
+
+.social ul li .fa-google-plus-g {
+    background: #d95232;
+}
+
+.social ul li .fa-instagram {
+    background: #3f729b;
+}
 
 .social ul li a:hover {
-    border-radius: 0 10px 10px 0; /* Redondeamos los bordes al pasar el mause */
-    background: #C5D544; /* Cambiamos el fondo cuando el usuario pase el mouse */
-    padding: 10px 40px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+    border-radius: 0 10px 10px 0;
+    /* Redondeamos los bordes al pasar el mause */
+    background: #C5D544;
+    /* Cambiamos el fondo cuando el usuario pase el mouse */
+    padding: 10px 40px;
+    /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 }
+
 
 /* end social media flotante */
 
+
 /* video institucional */
+
 .video-institucional {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	position: relative;
-	}
-.video-institucional iframe, 
-.video-institucional object, 
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.video-institucional iframe,
+.video-institucional object,
 .video-institucional embed {
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	}
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 
 /* end video institucional */
 
+
 /* //team */
+
+
 /* team responsive */
+
 @media(max-width:1080px) {
     .team-grids h4 {
         font-size: 1em;
     }
-
     .about_grids h3 {
         font-size: 22px;
     }
@@ -1192,9 +1323,15 @@ a.w3_agile_google:hover {
     }
 }
 
+
 /* //team responsive */
+
+
 /* //about page */
+
+
 /* single page */
+
 h6.blog-first {
     font-weight: 400;
     font-size: 20px;
@@ -1255,7 +1392,9 @@ ul.blog_list.my-3 li {
     color: #fff;
 }
 
+
 /* comments */
+
 .comments-grid-right ul li {
     display: inline-block;
     color: #888;
@@ -1275,7 +1414,9 @@ ul.blog_list.my-3 li {
     font-size: 14px;
 }
 
+
 /* //comments */
+
 .leave-coment-form input[type="text"],
 .leave-coment-form input[type="email"],
 .leave-coment-form textarea {
@@ -1319,8 +1460,12 @@ ul.blog_list.my-3 li {
     background: #212121;
 }
 
+
 /* right side */
+
+
 /* search */
+
 .event-right input[type="search"] {
     padding: 12px;
     width: 100%;
@@ -1332,16 +1477,24 @@ ul.blog_list.my-3 li {
     width: 100%;
 }
 
+
 /* //search */
+
+
 /* blog right title */
+
 h3.blog-title {
     font-size: 25px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.27);
 }
 
+
 /* //blog right title */
+
+
 /* Categories */
+
 .categories ul li,
 .single-left2-left ul li {
     list-style-type: none;
@@ -1365,8 +1518,12 @@ h3.blog-title {
     color: #4575bd !important;
 }
 
+
 /* //Categories */
+
+
 /* event */
+
 .posts-grid-right h4 a {
     font-size: 15px;
     letter-spacing: 1px;
@@ -1381,8 +1538,12 @@ h3.blog-title {
     font-size: 13px;
 }
 
+
 /* //event */
+
+
 /* tags */
+
 .tags ul li {
     display: inline-block;
 }
@@ -1399,9 +1560,15 @@ h3.blog-title {
     color: #fff;
 }
 
+
 /* //tags */
+
+
 /* //right side */
+
+
 /* tabs */
+
 ul#myTab {
     margin-bottom: 4em;
 }
@@ -1448,7 +1615,7 @@ h4.price-clr {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-    color: #f44336;
+    color: #005CE2;
 }
 
 .agileinfo-tab-content1:nth-child(1),
@@ -1456,10 +1623,18 @@ h4.price-clr {
     padding-top: 4em;
 }
 
+
 /* //tabs */
+
+
 /* //single page */
+
+
 /* contact page */
+
+
 /* contact */
+
 .contact {
     background: #d8dadc;
 }
@@ -1531,17 +1706,27 @@ select.form-control:not([size]):not([multiple]) {
     margin-bottom: 0;
 }
 
+
 /* //contact */
+
+
 /* map */
+
 .map iframe {
     width: 100%;
     height: 400px;
     border: none;
 }
 
+
 /* //map */
+
+
 /* //contact page */
+
+
 /* gallery */
+
 .da-thumbs {
     list-style: none;
     position: relative;
@@ -1591,8 +1776,12 @@ select.form-control:not([size]):not([multiple]) {
     margin-top: 1.5em;
 }
 
+
 /*--//gallery--*/
+
+
 /* appointment */
+
 .appoint-img {
     background: url(../images/bg6.jpg) no-repeat left bottom fixed;
     float: left;
@@ -1609,8 +1798,12 @@ label.col-form-label {
     text-align: left;
 }
 
+
 /* //appointment */
+
+
 /* responsive */
+
 @media(max-width: 1680px) {}
 
 @media(max-width: 1600px) {}
@@ -1627,92 +1820,71 @@ label.col-form-label {
     .banner-info_agile_w3ls h3 {
         font-size: 52px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 14em;
     }
 }
 
 @media(max-width: 1080px) {
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
         font-size: 13px;
     }
-
     .navbar-light .navbar-nav .nav-link {
         font-size: 15px;
     }
-
     a.navbar-brand {
         font-size: 46px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 48px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 13em;
     }
-
     .welcome-left h3 {
         font-size: 34px;
     }
-
     .welcome-left h4 {
         font-size: 18px;
     }
-
     .welcome-left h6 {
         font-size: 17px;
     }
-
     .agile-why-text-2 h4 {
         font-size: 21px;
     }
-
     .price-bottom h4 {
         font-size: 21px
     }
-
     .price-bottom a {
         font-size: 14px;
     }
-
     .agileits-w3layouts-grid {
         margin-bottom: 3em;
     }
-
     .banner-info_agile_w3ls p {
         max-width: 900px;
     }
-
     .da-thumbs li a div h5 {
         margin-top: 1em;
     }
-
     .da-thumbs li {
         width: 30%;
     }
-
     .contact-right-w3l {
         padding: 3em 3em;
     }
-
     .leave-coment-form input[type="email"] {
         margin-left: 0.8em;
     }
-
     .nav-tabs .nav-link {
         font-size: 18px;
     }
-
     .admin p {
         font-size: 13px;
     }
-
     .admin a {
         font-size: 16px;
     }
@@ -1724,15 +1896,12 @@ label.col-form-label {
     .banner-info_agile_w3ls h3 {
         font-size: 44px;
     }
-
     .banner-info_agile_w3ls p {
         font-size: 14px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 12em;
     }
-
     .map iframe {
         height: 300px;
     }
@@ -1742,85 +1911,66 @@ label.col-form-label {
     .navbar-light .navbar-toggler {
         background: #fff;
     }
-
     div#navbarSupportedContent {
         background: rgba(69, 117, 189, 0.8);
     }
-
     a.w3ls-button-agile {
         padding: 14px 18px;
     }
-
     h6.text-white {
         font-size: 18px;
     }
-
     .banner-left-bottom-w3ls h3 {
         font-size: 33px;
     }
-
     .banner-left-bottom-w3ls p {
         font-size: 13px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 11em;
     }
-
     .banner-info_agile_w3ls a:hover,
     a.w3ls-button-agile:hover {
         letter-spacing: 2px;
     }
-
     .agile-why-text-2 {
         padding: 35px;
     }
-
     .agileits-w3layouts-grid img {
         width: 50%;
     }
-
     .price-bottom a {
         font-size: 13px;
     }
-
     .w3ls-wthree-screen img {
         width: 70%;
     }
-
     .da-thumbs li {
         width: 29.4%;
     }
-
     .da-thumbs li a div h5 {
         font-size: 28px;
     }
-
     .da-thumbs li a div span {
         font-size: 12px;
         margin: 12px 18px 0;
     }
-
     .agileits-contact .d-flex,
     .appointment .d-flex {
         display: inherit !important;
     }
-
     .w3_agileits-contact-left,
     .appoint-img {
         min-height: 320px;
     }
-
     .appoint-img,
     .contact-right-w3l.appoint-form {
         float: none;
         width: 100%;
     }
-
     .posts-grid-left {
         text-align: center;
     }
-
     .callbacks_tabs {
         top: 41%;
     }
@@ -1830,7 +1980,6 @@ label.col-form-label {
     .banner-info_agile_w3ls h3 {
         font-size: 40px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 10em;
     }
@@ -1840,11 +1989,9 @@ label.col-form-label {
     .banner-info_agile_w3ls p {
         font-size: 13px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 9em;
     }
-
     .about p.aboutpara {
         font-size: 15px;
     }
@@ -1854,25 +2001,20 @@ label.col-form-label {
     a.navbar-brand {
         font-size: 43px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 35px;
     }
-
     .banner-info_agile_w3ls a {
         padding: 12px 17px;
         font-size: 13px;
     }
-
     a.navbar-brand {
         font-size: 38px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 7.5em;
         margin: 0 2em;
     }
-
     .callbacks_tabs {
         top: 38%;
         right: 6%;
@@ -1883,51 +2025,40 @@ label.col-form-label {
     .banner-info_agile_w3ls h3 {
         font-size: 31px;
     }
-
     h6.text-white {
         font-size: 16px;
     }
-
     .banner-left-bottom-w3ls h3 {
         font-size: 28px;
     }
-
     .banner-left-bottom-w3ls {
         flex: 2;
     }
-
     h3.title {
         font-size: 36px;
     }
-
     .w3ls-titles p {
         font-size: 13px;
     }
-
     .da-thumbs li {
         width: 45%;
     }
-
     .w3_agileits-contact-left,
     .appoint-img {
         min-height: 270px;
     }
-
     .contact-right-w3l {
         padding: 3em 3em 0;
     }
-
     .leave-coment-form input[type="email"] {
         margin-left: 0;
         margin-top: 1em;
     }
-
     .leave-coment-form input[type="text"],
     .leave-coment-form input[type="email"],
     .leave-coment-form textarea {
         width: 100%;
     }
-
     .nav-tabs .nav-link {
         font-size: 16px;
     }
@@ -1937,11 +2068,9 @@ label.col-form-label {
     .welcome-left h3 {
         font-size: 28px;
     }
-
     .welcome-left h6 {
         font-size: 16px;
     }
-
     .welcome-left h4 {
         font-size: 16px;
     }
@@ -1952,19 +2081,15 @@ label.col-form-label {
         padding: 3px 7px;
         font-size: 20px;
     }
-
     nav.navbar.navbar-expand-lg.navbar-light {
         padding: 0;
     }
-
     nav.navbar.navbar-expand-lg.navbar-light.fixed-navi.isFixed {
         padding: 8px 0;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 6.5em;
     }
-
     .callbacks_tabs {
         top: 35%;
     }
@@ -1975,30 +2100,24 @@ label.col-form-label {
         width: 90%;
         margin: 0 auto;
     }
-
     .banner-top1,
     .banner-top2,
     .banner-top3,
     .banner-top4 {
         height: 60vw;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 7.5em;
     }
-
     .contact-right-w3l input[type="submit"] {
         font-size: 15px;
     }
-
     .comments-grid-right {
         margin: 0 !important;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 30px;
     }
-
     .banner-info_agile_w3ls {
         margin: 0 2em 0 1.5em;
     }
@@ -2008,116 +2127,90 @@ label.col-form-label {
     nav.navbar.navbar-expand-lg.navbar-light {
         padding: 0 12px;
     }
-
     nav.navbar.navbar-expand-lg.navbar-light.fixed-navi.isFixed {
         padding: 8px 10px;
     }
-
     .comments-grid-right h4 {
         font-size: 22px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 28px;
     }
 }
 
 @media(max-width: 480px) {
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
         font-size: 12px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 24px;
     }
-
     .banner-info_agile_w3ls h3 span {
         padding: 0 10px;
     }
-
     .banner-top1,
     .banner-top2,
     .banner-top3,
     .banner-top4 {
         height: 74vw;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 6.5em;
     }
-
     .banner-left-bottom-w3ls h3 {
         font-size: 24px;
     }
-
     .welcome-right img {
         width: 80%;
     }
-
     .agile-why-text-2 p {
         font-size: 13px;
     }
-
     .agile-why-text-2 {
         padding: 28px;
     }
-
     .agileits-w3layouts-grid img {
         width: 60%;
     }
-
     .agileits-w3layouts-grid {
         margin-bottom: 2em;
     }
-
     a.w3ls-button-agile {
         padding: 14px 11px;
     }
-
     .w3ls-titles p {
         font-size: 12px;
     }
-
     h3.title {
         font-size: 34px;
     }
-
     .w3ls-titles i {
         font-size: 22px;
     }
-
     .inner-banner-w3ls {
         height: 30vw;
     }
-
     .da-thumbs li {
         width: 44.3%;
     }
-
     .da-thumbs li a div h5 {
         font-size: 25px;
     }
-
     .da-thumbs li a div h5 {
         margin-top: .8em;
     }
-
     .nav-tabs .nav-link {
         font-size: 15px;
     }
-
     .callbacks_tabs {
         top: 82%;
         right: 80%;
     }
-
     .callbacks_tabs li {
         display: inline-block;
     }
-
     .banner-info_agile_w3ls {
         margin: 0 1.2em;
     }
@@ -2127,182 +2220,143 @@ label.col-form-label {
     .header-top_w3layouts {
         padding-left: 9px !important;
     }
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
         font-size: 11px;
     }
-
     .banner-info_agile_w3ls p {
         font-size: 12px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 24px;
     }
-
     .banner-top1,
     .banner-top2,
     .banner-top3,
     .banner-top4 {
         height: 80vw;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 7em;
     }
-
     .d-flex.container {
         display: inherit !important;
     }
-
     .button {
         margin-top: 2em;
     }
-
     a.w3ls-button-agile {
         padding: 14px 15px;
     }
-
     .welcome-left h3 {
         font-size: 24px;
     }
-
     p {
         font-size: 14px;
     }
-
     .w3l-footer h2 a {
         font-size: 36px;
     }
-
     .about p.aboutpara {
         font-size: 14px;
     }
-
     .da-thumbs li {
         width: 43.9%;
     }
-
     .da-thumbs li a div span {
         margin: 5px 10px 0;
     }
-
     .da-thumbs li a div h5 {
         margin-top: .5em;
     }
-
     h5.title-w3 {
         font-size: 30px;
     }
-
     .nav-tabs .nav-link {
         font-size: 14px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 21px;
     }
-
     a.navbar-brand {
         font-size: 34px;
     }
 }
 
 @media(max-width: 414px) {
-
     ul.top-right-info,
     .header-top_w3layouts {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .top-right-info li i {
         font-size: 14px;
     }
-
     .top-social-agile:nth-child(2) {
         margin-top: 8px;
     }
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
         font-size: 12px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 28px;
         line-height: 1.5;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 5.5em;
     }
-
     .banner-top1,
     .banner-top2,
     .banner-top3,
     .banner-top4 {
         height: 90vw;
     }
-
     .da-thumbs li {
         width: 95%;
     }
-
     .da-thumbs li a div h5 {
         margin-top: 2em;
         font-size: 30px;
     }
-
     .da-thumbs li a div span {
         margin: 19px 34px 0;
         font-size: 13px;
     }
-
     .w3_agileits-contact-left,
     .appoint-img {
         min-height: 250px;
     }
-
     h5.title-w3 {
         font-size: 30px;
     }
-
     .contact-right-w3l {
         padding: 3em 2em 0;
     }
-
     .contact-right-w3l input[type="text"],
     .contact-right-w3l input[type="email"],
     .contact-right-w3l textarea,
     .contact-right-w3l select.form-control {
         font-size: 14px;
     }
-
     .contact-right-w3l textarea {
         height: 150px;
     }
-
     .comments-grid-left {
         padding-right: 0;
     }
-
     .leave-coment-form textarea {
         min-height: 180px;
     }
-
     .posts-grid-right {
         margin-top: 0 !important;
     }
-
     .callbacks_tabs {
         top: 85%;
         right: 78%;
     }
-
     .modal-body h5 {
         margin-left: 1em;
     }
@@ -2312,32 +2366,26 @@ label.col-form-label {
     .nav-tabs .nav-link {
         font-size: 12px;
     }
-
     .tags ul li a {
         font-size: 14px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 5em;
     }
-
     .callbacks_tabs {
         top: 86%;
         right: 75%;
     }
-
     .banner-top1,
     .banner-top2,
     .banner-top3,
     .banner-top4 {
         height: 96vw;
     }
-
     p.copy-right-grids {
         font-size: 13px;
         letter-spacing: 1px;
     }
-
     .login.px-4.mx-auto {
         padding: 0 !important;
     }
@@ -2347,17 +2395,14 @@ label.col-form-label {
     .banner-info_agile_w3ls {
         padding-top: 5em;
     }
-
     .welcome-right img {
         width: 100%;
     }
-
     .comments-grid-left,
     .comments-grid-right {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .comments-grid-right {
         margin-top: 1em !important;
     }
@@ -2367,148 +2412,119 @@ label.col-form-label {
     .top-w3layouts {
         padding: 0 6px;
     }
-
     .header-top_w3layouts p,
     .header-w3layouts p,
     .top-w3layouts p {
         font-size: 11px;
     }
-
     a.navbar-brand {
         font-size: 32px;
     }
-
     .navbar-light .navbar-toggler {
         padding: 2px 6px;
         font-size: 19px;
     }
-
     .banner-info_agile_w3ls h3 {
         font-size: 23px;
     }
-
     .banner-top1,
     .banner-top2,
     .banner-top3,
     .banner-top4 {
         height: 114vw;
     }
-
     .banner-info_agile_w3ls a {
         padding: 11px 14px;
         font-size: 12px;
     }
-
     .banner-info_agile_w3ls a {
         padding: 11px 14px;
     }
-
     .banner-info_agile_w3ls {
         padding-top: 4.5em;
     }
-
     .welcome-left h3 {
         font-size: 21px;
     }
-
     .welcome-left h6 {
         font-size: 12px;
     }
-
     .welcome-left h4 {
         font-size: 14px;
         margin: 18px 0 !important;
     }
-
     p {
         font-size: 13px;
     }
-
     .agile-why-text-2 h4 {
         font-size: 19px;
     }
-
     .wthree_features_grid i {
         width: 60px;
         height: 60px;
         font-size: 26px;
     }
-
     .agile-why-text-2 {
         padding: 20px;
     }
-
     .screen-agile-2 h5 {
         font-size: 22px;
     }
-
     .screen-agile i {
         width: 60px;
         height: 60px;
         font-size: 24px;
         line-height: 2.4;
     }
-
     .w3l-footer p,
     .w3l-footer p a,
     .w3l-footer ul li a {
         font-size: 13px;
     }
-
     .about p.aboutpara {
         font-size: 13px;
     }
-
     .da-thumbs li a div h5 {
         margin-top: 1.5em;
     }
-
     .da-thumbs li a div span {
         margin: 12px 22px 0;
     }
-
     .w3_agileits-contact-left,
     .appoint-img {
         min-height: 200px;
     }
-
     .contact-right-w3l textarea {
         height: 120px;
     }
-
     .contact-right-w3l input[type="submit"] {
         font-size: 14px;
         padding: 13px 18px;
         margin-top: 1.5em;
     }
-
     .map iframe {
         height: 250px;
     }
-
     .posts-grid-left,
     .posts-grid-right {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .posts-grid-right {
         margin-top: 10px;
     }
-
     .nav-tabs .nav-link {
         font-size: 11px;
         letter-spacing: 0px;
     }
-
     .callbacks_tabs {
         right: 71%;
     }
-
     .modal-body h5 {
         font-size: 25px;
         margin-left: 0em;
     }
 }
+
 
 /* //responsive */
