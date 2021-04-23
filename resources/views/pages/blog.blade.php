@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.web')
 
 @section('content')
     
@@ -14,7 +14,7 @@
     <div aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{ route('home') }}">Home</a>
+                <a href="/">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Blog</li>
         </ol>
@@ -23,9 +23,9 @@
 <!-- //page details -->
 
   <!-- blog -->
-    <section class="banner-bottom-w3layouts py-lg-5 py-md-5 py-3">
+    <section class="banner-bottom-w3layouts">
         <div class="container">
-            <div class="inner-sec-w3ls py-lg-5  py-3">
+            <div class="inner-sec-w3ls py-3">
                 <h3 class="tittle-wthree text-center mb-lg-5 mb-3">
                     <span>Nuestro</span> Blog</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
@@ -314,12 +314,12 @@
 										<i class="fab fa-twitter"></i>
 										<span class="count">Siguenos</span> en Twitter</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a class="google-plus-g" href="#">
 										<i class="fab fa-google-plus-g"></i>
 
 										<span class="count">Siguenos</span> en Google+</a>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a class="instagram" href="#">
 										<i class="fab fa-instagram"></i>

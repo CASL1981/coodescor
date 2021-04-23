@@ -1,14 +1,13 @@
-.text-color-blue{
-    color: #005ce2;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 
 /* partner */
-.container-partner
-{
+
+.container-partner {
     margin-left: auto;
     background: #005CE2;
-    
     position: relative;
     display: flex;
     justify-content: center;
@@ -17,8 +16,7 @@
     max-width: 1420px;
 }
 
-.container-partner .card-partner
-{
+.container-partner .card-partner {
     position: relative;
     width: 320px;
     height: 230px;
@@ -27,27 +25,24 @@
 }
 
 .container-partner .card-partner .imgBx,
-.container-partner .card-partner .contentBx
-{
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
+.container-partner .card-partner .contentBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.container-partner .card-partner .imgBx img
-{
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
+.container-partner .card-partner .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.container-partner .card-partner .contentBx::before
-{
+.container-partner .card-partner .contentBx::before {
     content: '';
     position: absolute;
     top: 0;
@@ -61,23 +56,20 @@
     transition-delay: 0.5s;
 }
 
-.container-partner .card-partner:hover .contentBx::before
-{
+.container-partner .card-partner:hover .contentBx::before {
     transform: scaleX(1);
     transition: transform 0.5s ease-in-out;
     transform-origin: left;
     transition-delay: 0s;
 }
 
-.container-partner .card-partner .contentBx
-{
+.container-partner .card-partner .contentBx {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-partner .card-partner .contentBx .content
-{
+.container-partner .card-partner .contentBx .content {
     position: relative;
     padding: 30px;
     z-index: 1;
@@ -86,36 +78,35 @@
     transition-delay: 0s;
 }
 
-.container-partner .card-partner:hover .contentBx .content
-{
+.container-partner .card-partner:hover .contentBx .content {
     transform: translatex(0px);
     transition-delay: 0.5s;
 }
 
-.container-partner .card-partner .contentBx .content h3
-{
+.container-partner .card-partner .contentBx .content h3 {
     font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #005CE2;
 }
 
-.container-partner .card-partner .contentBx .content p
-{
+.container-partner .card-partner .contentBx .content p {
     font-size: 1em;
     line-height: 1.4em;
     font-weight: 300;
     color: #005CE2;
 }
 
+
 /* end partner */
 
+
 /* services */
+
 .section-services {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,8 +114,7 @@
     /* background: #005ce2; */
 }
 
-.container-services
-{
+.container-services {
     position: relative;
     display: flex;
     justify-content: center;
@@ -133,22 +123,20 @@
     margin: 20px 0;
 }
 
-.container-services .card-services
-{
+.container-services .card-services {
     position: relative;
     width: 300px;
     height: 500px;
     margin: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-services .card-services .content-services
-{
+.container-services .card-services .content-services {
     position: absolute;
     bottom: -160px;
     width: 100%;
@@ -159,20 +147,18 @@
     z-index: 10;
     flex-direction: column;
     backdrop-filter: blur(15px);
-    box-shadow: 0 -10px 10px rgbd(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 -10px 10px rgbd(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: bottom 0.5s;
     transition-delay: 0.8s;
 }
 
-.container-services .card-services:hover .content-services
-{
+.container-services .card-services:hover .content-services {
     bottom: 0px;
     transition-delay: 0s;
 }
 
-.container-services .card-services .content-services .contentBx-services h3
-{
+.container-services .card-services .content-services .contentBx-services h3 {
     color: #005ce2;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -187,28 +173,24 @@
     transition-delay: 0.6s;
 }
 
-.container-services .card-services:hover .content-services .contentBx-services h3
-{
+.container-services .card-services:hover .content-services .contentBx-services h3 {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.container-services .card-services .content-services .contentBx-services h3 span
-{
+.container-services .card-services .content-services .contentBx-services h3 span {
     font-size: 12px;
     font-weight: 300;
     text-transform: initial;
 }
 
-.container-services .card-services .content-services .sci
-{
+.container-services .card-services .content-services .sci {
     position: relative;
     bottom: 10px;
     display: flex;
 }
 
-.container-services .card-services .content-services .sci li
-{
+.container-services .card-services .content-services .sci li {
     list-style: none;
     margin: 0 10px;
     transform: translateY(40px);
@@ -217,62 +199,63 @@
     transition-delay: calc(0.2s * var(--i));
 }
 
-.container-services .card-services:hover .content-services .sci li
-{
+.container-services .card-services:hover .content-services .sci li {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.container-services .card-services .content-services .sci li a
-{
+.container-services .card-services .content-services .sci li a {
     color: #005ce2;
     font-size: 24px;
-
 }
+
 
 /* end services */
 
+
 /* details services */
+
 .agileits-about-grids h4 {
-	text-transform: capitalize;
-	font-weight: 600;
-	color: #000;
-	font-size: 1.3em;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #000;
+    font-size: 1.3em;
 }
 
 .agileits-about-grids i {
-	font-size: 3em;
-	margin-bottom: 10px;
-	color: #aad0ec;
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #aad0ec;
 }
 
 .agileits-about-grids p {
-	max-width: 250px;
-	margin: 0 auto;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .agileits-about-grids:nth-child(3) i {
-	color: #0fb492;
+    color: #0fb492;
 }
 
 .agileits-about-grids:nth-child(2) i {
-	color: #f5ac43;
+    color: #f5ac43;
 }
 
 .agileits-about-grids:nth-child(1) i {
-	color: #634271;
+    color: #634271;
 }
 
 .agileits-about-grids:nth-child(1) .col-label i {
-	color: #00ddd8;
+    color: #00ddd8;
 }
 
 .agileits-about-grids:nth-child(2) .col-label i {
-	color: #8cc540;
+    color: #8cc540;
 }
 
 .agileits-about-grids:nth-child(3) .col-label i {
-	color: #ec408c;   
+    color: #ec408c;
 }
+
 
 /* end details services */

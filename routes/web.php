@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,18 +15,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', [PagesController::class, 'Home'])->name('home');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+// Route::get('/', [PagesController::class, 'Home'])->name('home');
 Route::get('/blog', [PagesController::class, 'Blog'])->name('blog');
-Route::get('/contacto', [PagesController::class, 'Contact'])->name('contact');
+Route::get('/contact', [PagesController::class, 'Contact'])->name('contact');
 Route::get('/blog/post', [PagesController::class, 'Post'])->name('blog.post');
 Route::get('/about', [PagesController::class, 'About'])->name('about');
 Route::get('/partner', [PagesController::class, 'Partner'])->name('partner');
 Route::get('/services', [PagesController::class, 'Services'])->name('services');
 Route::get('/pqrs', [PagesController::class, 'PQRS'])->name('pqrs');
 Route::get('/news', [PagesController::class, 'News'])->name('news');
-Auth::routes();
 
-Auth::routes();
+require __DIR__.'/auth.php';
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::resource('asociados', PartnerController::class);
+});

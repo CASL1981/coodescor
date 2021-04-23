@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.web')
 
 @section('content')
 	
@@ -14,7 +14,7 @@
 		<div aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="{{ route('home') }}">Home</a>
+					<a href="/">Home</a>
 				</li>
 				<li class="breadcrumb-item active" aria-current="page">Contacto</li>
 			</ol>

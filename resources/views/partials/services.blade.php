@@ -19,7 +19,7 @@
                 </div>
                 <div class="content-services">
                     <div class="contentBx-services">
-                        <a href="{{ route('services') }}">
+                        <a href="#">
                             <h3>Venta Medicamentos y Dispositivos Medicos<br><span>Productos de Alta Calidad</span></h3>
                         </a>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="content-services">
                     <div class="contentBx-services">
-                        <a href="{{ route('contact') }}">
+                        <a href="#">
                             <h3>Como Asociarse<br><span>Contactanos</span></h3>
                         </a>
                     </div>

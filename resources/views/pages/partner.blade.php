@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.web')
 
 @section('content')
     
@@ -14,7 +14,7 @@
     <div aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{ route('home') }}">Home</a>
+                <a href="/">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Asociados</li>
         </ol>
@@ -25,18 +25,20 @@
 {{-- Images partner --}}
 {{-- <div class="container-1"> --}}
     <div class="container-partner">
+        @foreach ($partners as $item)
         <div class="card-partner">
             <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/hospitalsagradocorazon.jpg" alt="asociado1">
+                <img class="img-fluid" src="/images/logos/{{ $item->logo }}" alt="{{ $item->name }}">
             </div>
             <div class="contentBx">
                 <div class="content">
-                    <h3>ESE HOSPITAL SAGRADO CORAZÓN DE JESÚS</h3>
-                    <p>Calle 12 No. 8 - 99 B/Nazareth 23430 Valencia, Colombia</p>
+                    <h3>{{ $item->name }}</h3>
+                    <p>{{ $item->address }}</p>
                 </div>
             </div>
-        </div>
-        <div class="card-partner">
+        </div>            
+        @endforeach
+        {{-- <div class="card-partner">
             <div class="imgBX">
                 <img class="img-fluid" src="/images/logos/camusantateresita.jpg" alt="asociado1">
             </div>
@@ -266,7 +268,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>    
 {{-- Images partner --}}
 @endsection

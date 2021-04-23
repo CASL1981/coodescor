@@ -18,10 +18,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
 
     </script>
-    <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
     <link href="/css/style.css" rel='stylesheet' type='text/css' />
     <link href="/css/blog.css" rel='stylesheet' type='text/css' />
-    <link href="/css/fontawesome-all.css" rel="stylesheet">
+    <link href="/css/fontawesome.all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
 </head>
 
@@ -105,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item mt-lg-0 mt-3">
-                            <a class="nav-link" href="{{ route('home') }}">Home
+                            <a class="nav-link" href="/">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -235,7 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{ route('home') }}">Home</a>
+                <a href="/">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="{{ route('blog') }}">Blog</a>
@@ -571,21 +571,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- //footer -->
     
         <!-- js -->
-        <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="/js/jquery-2.2.3.min.js"></script>
         <!-- fixed navigation -->
-        <script src="js/fixed-nav.js"></script>
+        <script src="/js/fixed-nav.js"></script>
         <!-- //fixed navigation -->
     
         <!-- smooth scrolling -->
-        <script src="js/SmoothScroll.min.js"></script>
+        <script src="/js/SmoothScroll.min.js"></script>
         <!-- move-top -->
-        <script src="js/move-top.js"></script>
+        <script src="/js/move-top.js"></script>
         <!-- easing -->
-        <script src="js/easing.js"></script>
+        <script src="/js/easing.js"></script>
         <!--  necessary snippets for few javascript files -->
-        <script src="js/medic.js"></script>
+        <script src="/js/medic.js"></script>
     
-        <script src="js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
         <!-- Necessary-JavaScript-File-For-Bootstrap -->
         <script>
             jQuery(document).ready(function ($) {

@@ -19,14 +19,9 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
+                                    <i class="fab fa-instagram"></i>
                                 </a>
-                            </li>
-                            <li class="ml-3">
-                                <a href="#">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                            </li>
+                            </li>                            
                         </ul>
                         <!-- //social icons -->
                         <div class="col-6 header-top_w3layouts pl-3 text-lg-left text-center">

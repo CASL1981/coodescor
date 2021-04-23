@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function Home()
-    {
-        return view('pages.home');
-    }
-
     public function blog()
     {
         return view('pages.blog');
@@ -33,7 +29,9 @@ class PagesController extends Controller
 
     public function partner()
     {
-        return view('pages.partner');
+        $partners = Partner::where('status', true)->orderBy('order')->get();
+
+        return view('pages.partner', compact('partners'));
     }
 
     public function services()
