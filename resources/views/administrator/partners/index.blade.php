@@ -6,16 +6,15 @@
         <p>{{ $message }}</p>
     </div>
 @endif
-<div class="card">
-    <div class="card-header bg-primary">
+<div class="box">
+    <div class="box-header with-border">
       <h3 class="card-title">Lista de Asociados</h3>
     </div>
     <!-- /.card-header -->
-    <div class="card-body">
+    <div class="box-body">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th style="width: 10px">#</th>
             <th>NIT</th>
             <th>Razon Social</th>
             <th>Dirección</th>
@@ -23,13 +22,12 @@
             <th>E</th>
             <th>H</th>
             <th>imagen</th>
-            <th>&nbsp;</th>
+            <th>Opciones</th>
           </tr>
         </thead>
         <tbody>          
             @foreach ($partners as $partner)
             <tr>
-                <td>{{ $partner->id }}</td>
                 <td>{{ $partner->nit }}</td>
                 <td>{{ $partner->name }}</td>
                 <td>{{ $partner->address }}</td>
@@ -39,11 +37,11 @@
                 <td>{{ $partner->logo }}</td>
                 <td>
                   <form action="{{ route('asociados.destroy',$partner->id) }}" method="POST">
-                      <a class="btn btn-primary btn-sm" href="{{ route('asociados.edit',$partner->id) }}">
-                      <i class="fas fa-edit"></i></a>
+                      <a class="btn btn-primary btn-xs" href="{{ route('asociados.edit',$partner->id) }}">
+                      <i class="fa fa-pencil"></i></a>
                       @csrf
                       @method('DELETE')      
-                      <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>
+                      <button type="submit" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>
                       </button>
                   </form>
                 </td>
@@ -53,7 +51,7 @@
       </table>
     </div>
     <!-- /.card-body -->
-    <div class="card-footer clearfix">
+    <div class="box-footer clearfix">
         <ul class="pagination pagination-sm m-0 float-right">
           {!! $partners->links() !!}
           {{-- <li class="page-item"><a class="page-link" href="#">«</a></li>

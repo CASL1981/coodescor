@@ -16,15 +16,15 @@
         </ul>
     </div>
 @endif
-<div class="card card-primary">
-  <div class="card-header">
-    <h3 class="card-title">Editar Asociados</h3>
+<div class="box box-primary">
+  <div class="box-header">
+    <h3 class="box-title">Editar Asociados</h3>
   </div>  
   <!-- /.card-header -->
   <!-- form start -->
   <form action="{{ route('asociados.update', $partner->id) }}" method="POST">
   @csrf @method('PUT')
-    <div class="card-body">
+    <div class="box-body">
     <div class="row">
         <div class="form-group col-md-6">
           <label for="nit">NIT</label>
@@ -69,7 +69,7 @@
     </div>
     <!-- /.card-body -->
 
-    <div class="card-footer">
+    <div class="box-footer">
       <button type="submit" class="btn btn-primary">Actualizar</button>
     </div>
   </form>

@@ -32,181 +32,38 @@
                     <!--left-->
                     <div class="col-lg-8 left-blog-info text-left">
                         <div class="row mb-4">
-                            <div class="col-md-6 card">
-                                <a href="{{ route('blog.post') }}">
-								<img src="images/g1.jpg" class="img-fluid" alt="">
-							</a>
-                                <div class="card-body">
-                                    <ul class="blog-icons my-4">
-                                        <li>
-                                            <a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 20 .2018</a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-											<i class="far fa-comment"></i> 21</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-                                        </li>
+                            @foreach ($posts as $post)
+                                <div class="col-md-6 card">
+                                    <a href="{{ route('blog.post') }}">
+                                        <img src="images/g1.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <ul class="blog-icons my-4">
+                                            <li>
+                                                <a href="#">
+                                                <i class="far fa-calendar-alt"></i>{{ $post->published_at->diffForHumans()}}</a>
+                                            </li>
+                                            <li class="mx-2">
+                                                <a href="#">
+                                                <i class="far fa-comment"></i> 21</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fas fa-eye"></i> 2000</a>
+                                            </li>
 
-                                    </ul>
-                                    <h5 class="card-title ">
-                                        <a href="{{ route('blog.post') }}">Blog Post Title</a>
-                                    </h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                    <div class="read inner mt-4">
-                                        <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Read More</a>
+                                        </ul>
+                                        <h5 class="card-title ">
+                                            <a href="{{ route('blog.post') }}">{{ $post->title }}</a>
+                                        </h5>
+                                        <p class="card-text">{{ $post->excerpt }}</p>
+                                        <div class="read inner mt-4">
+                                            <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Leer Mas</a>
+                                        </div>
+
                                     </div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6 card">
-                                <a href="{{ route('blog.post') }}">
-								<img src="images/g3.jpg" class="img-fluid" alt="">
-							</a>
-                                <div class="card-body">
-                                    <ul class="blog-icons my-4">
-                                        <li>
-                                            <a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 22 .2018</a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-											<i class="far fa-comment"></i> 21</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-                                        </li>
-
-                                    </ul>
-                                    <h5 class="card-title ">
-                                        <a href="{{ route('blog.post') }}">Blog Post Title</a>
-                                    </h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                    <div class="read inner mt-4">
-                                        <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 card my-4">
-                                <a href="{{ route('blog.post') }}">
-								<img src="images/g3.jpg" class="img-fluid" alt="">
-							</a>
-                                <div class="card-body">
-                                    <ul class="blog-icons my-4">
-                                        <li>
-                                            <a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 23 .2018</a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-											<i class="far fa-comment"></i> 21</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-                                        </li>
-
-                                    </ul>
-                                    <h5 class="card-title ">
-                                        <a href="{{ route('blog.post') }}">Blog Post Title</a>
-                                    </h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                    <div class="read inner mt-4">
-                                        <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 card my-4">
-                                <a href="{{ route('blog.post') }}">
-								<img src="images/g4.jpg" class="img-fluid" alt="">
-							</a>
-                                <div class="card-body">
-                                    <ul class="blog-icons my-4">
-                                        <li>
-                                            <a href="#">
-											<i class="far fa-calendar-alt"></i> Mar 20 .2018</a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-											<i class="far fa-comment"></i> 21</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-                                        </li>
-
-                                    </ul>
-                                    <h5 class="card-title ">
-                                        <a href="{{ route('blog.post') }}">Blog Post Title</a>
-                                    </h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                    <div class="read inner mt-4">
-                                        <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 card">
-                                <a href="{{ route('blog.post') }}">
-								<img src="images/g5.jpg" class="img-fluid" alt="">
-							</a>
-                                <div class="card-body">
-                                    <ul class="blog-icons my-4">
-                                        <li>
-                                            <a href="#">
-											<i class="far fa-calendar-alt"></i> Mar 25 .2018</a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-											<i class="far fa-comment"></i> 21</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-                                        </li>
-
-                                    </ul>
-                                    <h5 class="card-title ">
-                                        <a href="{{ route('blog.post') }}">Blog Post Title</a>
-                                    </h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                    <div class="read inner mt-4">
-                                        <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 card">
-                                <a href="{{ route('blog.post') }}">
-								<img src="images/g6.jpg" class="img-fluid" alt="">
-							</a>
-                                <div class="card-body">
-                                    <ul class="blog-icons my-4">
-                                        <li>
-                                            <a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 30 .2018</a>
-                                        </li>
-                                        <li class="mx-2">
-                                            <a href="#">
-											<i class="far fa-comment"></i> 21</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-											<i class="fas fa-eye"></i> 2000</a>
-                                        </li>
-
-                                    </ul>
-                                    <h5 class="card-title ">
-                                        <a href="{{ route('blog.post') }}">Blog Post Title</a>
-                                    </h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                    <div class="read inner mt-4">
-                                        <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
+                                </div>                                
+                            @endforeach                            
                         </div>
                         {{-- <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-left mt-4">
@@ -247,18 +104,12 @@
                             <div class="tech-btm">
                                 <h4>Categorias</h4>
                                 <ul class="list-group single">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge badge-primary badge-pill">14</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Dapibus ac facilisis in
-                                        <span class="badge badge-primary badge-pill">2</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Morbi leo risus
-                                        <span class="badge badge-primary badge-pill">1</span>
-                                    </li>
+                                    @foreach ($categories as $category)
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {{ $category->name }}
+                                            <span class="badge badge-primary badge-pill">14</span>
+                                        </li>                                        
+                                    @endforeach                                    
                                 </ul>
                             </div>
                             <div class="tech-btm">
@@ -330,60 +181,26 @@
                             </div>
                             <div class="tech-btm">
                                 <h4>Publicaciones Recientes</h4>
-
+                                @foreach ($posts_recent as $post)
                                 <div class="blog-grids row mb-3 text-left">
                                     <div class="col-md-5 blog-grid-left">
                                         <a href="{{ route('blog.post') }}">
-										<img src="images/g1.jpg" class="img-fluid" alt="">
-									</a>
+										    <img src="images/g3.jpg" class="img-fluid" alt="">
+									    </a>
                                     </div>
                                     <div class="col-md-7 blog-grid-right">
-
                                         <h5>
-                                            <a href="{{ route('blog.post') }}">Pellentesque dui, non felis. Maecenas male non felis </a>
+                                            <a href="{{ route('blog.post') }}">{{ $post->title }}</a>
                                         </h5>
                                         <div class="sub-meta">
                                             <span>
-											<i class="far fa-clock"></i> 20 May, 2018</span>
+											<i class="far fa-clock"></i> {{ $post->published_at->format('l jS \\of F Y') }}</span>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="blog-grids row mb-3 text-left">
-                                    <div class="col-md-5 blog-grid-left">
-                                        <a href="{{ route('blog.post') }}">
-										<img src="images/g2.jpg" class="img-fluid" alt="">
-									</a>
-                                    </div>
-                                    <div class="col-md-7 blog-grid-right">
-
-                                        <h5>
-                                            <a href="{{ route('blog.post') }}">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                        </h5>
-                                        <div class="sub-meta">
-                                            <span>
-											<i class="far fa-clock"></i> 20 May, 2018</span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <div class="blog-grids row mb-3 text-left">
-                                    <div class="col-md-5 blog-grid-left">
-                                        <a href="{{ route('blog.post') }}">
-										<img src="images/g3.jpg" class="img-fluid" alt="">
-									</a>
-                                    </div>
-                                    <div class="col-md-7 blog-grid-right">
-                                        <h5>
-                                            <a href="{{ route('blog.post') }}">Pellentesque dui, non felis. Maecenas male non felis </a>
-                                        </h5>
-                                        <div class="sub-meta">
-                                            <span>
-											<i class="far fa-clock"></i> 20 June, 2018</span>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                    
+                                @endforeach                                
                             </div>
                         </div>
                     </aside>

@@ -1,11 +1,6 @@
 @extends('layouts.admin')
 
 @section('dashboard_content')
-@if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
-@endif
 @if ($errors->any())
     <div class="alert alert-danger">
         <strong>Error</strong> Soluciona las siguientes validaciones<br><br>
@@ -16,15 +11,15 @@
         </ul>
     </div>
 @endif
-<div class="card card-primary">
-  <div class="card-header">
-    <h3 class="card-title">Crear Asociados</h3>
+<div class="box box-primary">
+  <div class="box-header">
+    <h3 class="box-title">Crear Asociados</h3>
   </div>
   <!-- /.card-header -->
   <!-- form start -->
   <form action="{{ route('asociados.store') }}" method="POST">
   @csrf
-    <div class="card-body">
+    <div class="box-body">
     <div class="row">
         <div class="form-group col-md-6">
           <label for="nit">NIT</label>

@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Partner;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function blog()
     {
-        return view('pages.blog');
+        $posts = Post::orderBy('published_at')->get();
+        $categories = Category::all();
+        $posts_recent = Post::latest()->take(3)->get();
+
+        return view('pages.blog', compact('posts', 'categories', 'posts_recent'));
     }
 
     public function contact()
