@@ -27,7 +27,7 @@ Route::get('/dashboard', function () {
 // Route::get('/', [PagesController::class, 'Home'])->name('home');
 Route::get('/blog', [PagesController::class, 'Blog'])->name('blog');
 Route::get('/contact', [PagesController::class, 'Contact'])->name('contact');
-Route::get('/blog/post', [PagesController::class, 'Post'])->name('blog.post');
+Route::get('/blog/post/{post}', [PagesController::class, 'Post'])->name('blog.post');
 Route::get('/about', [PagesController::class, 'About'])->name('about');
 Route::get('/partner', [PagesController::class, 'Partner'])->name('partner');
 Route::get('/services', [PagesController::class, 'Services'])->name('services');

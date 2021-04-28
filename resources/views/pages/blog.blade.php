@@ -34,7 +34,7 @@
                         <div class="row mb-4">
                             @foreach ($posts as $post)
                                 <div class="col-md-6 card">
-                                    <a href="{{ route('blog.post') }}">
+                                    <a href="{{ route('blog.post', $post->id) }}">
                                         <img src="images/g1.jpg" class="img-fluid" alt="">
                                     </a>
                                     <div class="card-body">
@@ -47,20 +47,25 @@
                                                 <a href="#">
                                                 <i class="far fa-comment"></i> 21</a>
                                             </li>
-                                            <li>
+                                            {{-- <li>
                                                 <a href="#">
                                                 <i class="fas fa-eye"></i> 2000</a>
-                                            </li>
+                                            </li> --}}
 
                                         </ul>
                                         <h5 class="card-title ">
-                                            <a href="{{ route('blog.post') }}">{{ $post->title }}</a>
+                                            <a href="{{ route('blog.post', $post->id) }}">{{ $post->title }}</a>
                                         </h5>
                                         <p class="card-text">{{ $post->excerpt }}</p>
                                         <div class="read inner mt-4">
-                                            <a href="{{ route('blog.post') }}" class="btn btn-sm animated-button victoria-two">Leer Mas</a>
+                                            @foreach ($post->tags as $tag)
+                                                <a href="#" class="badge badge-secondary">#{{ $tag->name }}</a>
+                                                {{-- <span class="tag c-gris"></span>                                                 --}}
+                                            @endforeach
                                         </div>
-
+                                        <div class="read inner mt-4">
+                                            <a href="{{ route('blog.post', $post->id) }}" class="btn btn-sm animated-button victoria-two">Leer Mas</a>
+                                        </div>
                                     </div>
                                 </div>                                
                             @endforeach                            
@@ -117,14 +122,14 @@
 
                                 <div class="blog-grids row mb-3">
                                     <div class="col-md-5 blog-grid-left">
-                                        <a href="{{ route('blog.post') }}">
+                                        <a href="#">
 										<img src="images/g6.jpg" class="img-fluid" alt="">
 									</a>
                                     </div>
                                     <div class="col-md-7 blog-grid-right">
 
                                         <h5>
-                                            <a href="{{ route('blog.post') }}">Pellentesque dui, non felis. Maecenas male non felis </a>
+                                            <a href="#">Pellentesque dui, non felis. Maecenas male non felis </a>
                                         </h5>
                                         <div class="sub-meta">
                                             <span>
@@ -135,13 +140,13 @@
                                 </div>
                                 <div class="blog-grids row mb-3">
                                     <div class="col-md-5 blog-grid-left">
-                                        <a href="{{ route('blog.post') }}">
+                                        <a href="#">
 										<img src="images/g4.jpg" class="img-fluid" alt="">
 									</a>
                                     </div>
                                     <div class="col-md-7 blog-grid-right">
                                         <h5>
-                                            <a href="{{ route('blog.post') }}">Pellentesque dui, non felis. Maecenas male non felis </a>
+                                            <a href="#">Pellentesque dui, non felis. Maecenas male non felis </a>
                                         </h5>
                                         <div class="sub-meta">
                                             <span>
@@ -184,13 +189,13 @@
                                 @foreach ($posts_recent as $post)
                                 <div class="blog-grids row mb-3 text-left">
                                     <div class="col-md-5 blog-grid-left">
-                                        <a href="{{ route('blog.post') }}">
+                                        <a href="{{ route('blog.post', $post->id) }}">
 										    <img src="images/g3.jpg" class="img-fluid" alt="">
 									    </a>
                                     </div>
                                     <div class="col-md-7 blog-grid-right">
                                         <h5>
-                                            <a href="{{ route('blog.post') }}">{{ $post->title }}</a>
+                                            <a href="{{ route('blog.post', $post->id) }}">{{ $post->title }}</a>
                                         </h5>
                                         <div class="sub-meta">
                                             <span>

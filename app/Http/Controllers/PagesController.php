@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
     public function blog()
     {
-        $posts = Post::orderBy('published_at')->get();
+        $posts = Post::published()->get();
         $categories = Category::all();
         $posts_recent = Post::latest()->take(3)->get();
 
@@ -23,9 +23,11 @@ class PagesController extends Controller
         return view('pages.contact');
     }
 
-    public function post()
+    public function post($id)
     {
-        return view('pages.post');
+        $post = Post::find($id);
+        
+        return view('pages.post', compact('post'));
     }
 
     public function about()

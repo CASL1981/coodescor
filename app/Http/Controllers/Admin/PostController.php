@@ -42,6 +42,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(Carbon::has($request->published_at));
+        
+        //validamos los request
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+            'excerpt' => 'required',
+            'category' => 'required',
+            'tag' => 'required'
+        ]);
+
+        //guardamos el post
         $post = new Post();
 
         $post->title = $request->title;

@@ -87,60 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- header 2 -->
 <div id="home">
     <!-- navigation -->
-    <div class="main-top py-1">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-navi">
-            <div class="container">
-                <!-- logo -->
-                <!-- <h1>
-                    <a class="navbar-brand font-weight-bold font-italic" href="index.html">
-                        <span>M</span>edic
-                        <i class="fas fa-syringe"></i>
-                    </a>
-                </h1> -->
-                <!-- //logo -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item mt-lg-0 mt-3">
-                            <a class="nav-link" href="/">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-lg-4 my-lg-0 my-3">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Pages
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                                <a class="dropdown-item" href="index.html">Services</a>
-                                <a class="dropdown-item" href="gallery.html">Gallery</a>
-                                <a class="dropdown-item" href="{{ route('blog') }}">Blog</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('blog.post') }}">Single Page</a>
-                            </div>
-                        </li>
-                        <li class="nav-item mx-lg-4 my-lg-0 my-3">
-                            <a class="nav-link" href="appointment.html">Appointment</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
-                        </li>
-                    </ul>
-                    <!-- login -->
-                    <a href="#" class="login-button ml-lg-5 mt-lg-0 mt-4 mb-lg-0 mb-3" data-toggle="modal" data-target="#exampleModalCenter1">
-                        <i class="fas fa-sign-in-alt mr-2"></i>Login</a>
-                    <!-- //login -->
-                </div>
-            </div>
-        </nav>
-    </div>
+    @include('partials.menu')
     <!-- //navigation -->
     <!-- modal -->
     <!-- login -->
@@ -276,22 +223,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <ul class="blog-icons my-4">
                                     <li>
                                         <a href="#">
-											<i class="far fa-calendar-alt"></i> Feb 20 .2018</a>
+											<i class="far fa-calendar-alt"></i> {{ $post->published_at->format('d M Y')}}</a>
                                     </li>
                                     <li class="mx-2">
                                         <a href="#">
 											<i class="far fa-comment"></i> 21</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="#">
 											<i class="fas fa-eye"></i> 2000</a>
-                                    </li>
+                                    </li> --}}
 
                                 </ul>
                                 <h5 class="card-title ">
-                                    <a href="#">Blog Post Title</a>
+                                    <a href="#">{{ $post->title }}</a>
                                 </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt,Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis aute irudre dolor in elit sed uta labore dolore reprehender.. </p>
+                                <p class="card-text">{!! $post->body !!}</p>
 
                             </div>
                         </div>
