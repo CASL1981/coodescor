@@ -1,5 +1,9 @@
 @extends('layouts.web')
 
+@section('page-title', 'COODESCOR | Nosotros')
+	
+@endsection
+
 @section('content')
 
 <!-- banner 2 -->

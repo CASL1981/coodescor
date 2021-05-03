@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Partner;
 use App\Models\Post;
-use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
@@ -13,7 +12,7 @@ class PagesController extends Controller
     {
         $posts = Post::published()->get();
         $categories = Category::all();
-        $posts_recent = Post::latest()->take(3)->get();
+        $posts_recent = Post::published()->latest()->take(3)->get();
 
         return view('pages.blog', compact('posts', 'categories', 'posts_recent'));
     }
@@ -23,10 +22,8 @@ class PagesController extends Controller
         return view('pages.contact');
     }
 
-    public function post($id)
-    {
-        $post = Post::find($id);
-        
+    public function post(Post $post)
+    {       
         return view('pages.post', compact('post'));
     }
 

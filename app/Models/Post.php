@@ -10,9 +10,14 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'excerpt', 'body', 'published_at'];
+    protected $fillable = ['title', 'url', 'excerpt', 'body', 'published_at'];
 
     protected $dates = ['published_at'];
+
+    public function getRouteKeyName()
+    {
+        return 'url';
+    }
 
     public function Category()
     {
@@ -24,10 +29,15 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    public function Photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+
     public function scopePublished($query)
     {
         $query->whereNotNull('published_at')
                 ->where('published_at', '<=', Carbon::now())
-                ->orderBy('published_at');
+                ->orderBy('published_at', 'DESC');
     }
 }

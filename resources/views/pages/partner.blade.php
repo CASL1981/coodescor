@@ -1,5 +1,7 @@
 @extends('layouts.web')
 
+@section('page-title', 'COODESCOR | Asociados')
+
 @section('content')
     
 <!-- banner 2 -->
@@ -22,253 +24,58 @@
 </div>
 <!-- //page details -->
 
-{{-- Images partner --}}
-{{-- <div class="container-1"> --}}
-    <div class="container-partner">
-        @foreach ($partners as $item)
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/{{ $item->logo }}" alt="{{ $item->name }}">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>{{ $item->name }}</h3>
-                    <p>{{ $item->address }}</p>
-                </div>
-            </div>
-        </div>            
-        @endforeach
-        {{-- <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/camusantateresita.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU SANTA TERESITA</h3>
-                    <p>LORICA CORDOBA Santa Cruz de Lorica, Cordoba, Colombia</p>
-                </div>
-            </div>
+<!-- gallery -->
+<div class="gallery">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="w3ls-titles text-center mb-5 welcome-left">
+            <h3>Asociados</h3>
+            <span>
+                <i class="fas fa-pills"></i>
+            </span>            
         </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/hospitalmontelibano.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL DE MONTELIBANO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/vidasinu.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE VIDASINÚ</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/hospitalsannicolas.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN NICOLÁS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/camusanantero.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU IRIS LOPEZ DURAN</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN ANDRÉS APÓSTOL</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN DIEGO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN FRANCISCO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN JERÓNIMO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN JORGE</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN JOSÉ - SAN BERNARDO DEL VIENTO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN RAFAEL</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE HOSPITAL SAN VICENTE DE PAÚL</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU BUENAVISTA</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/hospitalpuertolibertador.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU PUERTO LIBERTADOR</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU LA APARTADA</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU PUERTO ESCONDIDO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU PUEBLO NUEVO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU SAN PELAYO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/coodescor.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CENTRO DE SALUD COTORRA</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-partner">
-            <div class="imgBX">
-                <img class="img-fluid" src="/images/logos/camudelprado.jpg" alt="asociado1">
-            </div>
-            <div class="contentBx">
-                <div class="content">
-                    <h3>ESE CAMU DEL PRADO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div> --}}
-    </div>    
-{{-- Images partner --}}
+        <section>
+            <ul id="da-thumbs" class="da-thumbs">
+                @foreach ($partners as $item)
+                    <li>
+                        <a href="#" rel="" class="b-link-stripe b-animate-go  thickbox" title="Medic">
+                            <img src="/images/logos/{{ $item->logo }}" alt="{{ $item->name }}" class="img-fluid" />
+                            <div>
+                                <h5>{{ $item->name }}</h5>
+                                <span>{{ $item->address }}</span>
+                            </div>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+    </div>
+</div>
+<!-- //gallery -->
 @endsection
+
+@push('scripWeb')
+
+<!-- Gallery-js -->
+<script src="{{ asset('js/modernizr.custom.97074.js') }}"></script>
+<script src="{{ asset('js/jquery.hoverdir.js') }}"></script>
+<script>
+    $(function () {
+
+        $(' #da-thumbs > li ').each(function () {
+            $(this).hoverdir();
+        });
+
+    });
+</script>
+
+<script src="{{ asset('js/jquery.chocolat.js') }}"></script>
+<link rel="{{ asset('stylesheet" href="css/chocolat.css') }}" type="text/css">
+<!--light-box-files -->
+<script>
+    $(function () {
+        $('.da-thumbs a').Chocolat();
+    });
+</script>
+<!-- Gallery-js -->
+
+@endpush

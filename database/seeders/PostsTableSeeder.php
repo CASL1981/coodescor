@@ -62,6 +62,7 @@ class PostsTableSeeder extends Seeder
 
         $post = new Post();
         $post->title = "COODESCOR REALIZÓ PRIMER ENCUENTRO DEL PROGRAMA LIDERANDO ANDO";
+        $post->url = str::slug("COODESCOR REALIZÓ PRIMER ENCUENTRO DEL PROGRAMA LIDERANDO ANDO", '-');
         $post->excerpt = "La Cooperativa de Entidades de Salud de Córdoba realizó el primer encuentro del año con los líderes del Programa Institucional Liderando Ando, con el que se busca asegurar una comunicación efectiva";
         $post->body = "<p>La Cooperativa de Entidades de Salud de Córdoba realizó el primer encuentro del año con los líderes del Programa Institucional Liderando Ando, con el que se busca asegurar una comunicación efectiva, constante y coordinada entre Coodescor y las entidades asociadas, a través de un funcionario Líder que facilite el flujo de información entre ambas partes.</p>
         <p>Durante el encuentro la gerente de la Cooperativa, doctora Mónica Montes, socializó con los participantes el informe de gestión social del año 2020, en donde se dieron a conocer las diferentes gestiones adelantadas gracias a los recursos de los fondos de Educación, Recreación y Deportes, Solidaridad y de programas institucionales como el de Seguimiento Farmacoterapéutico.</p>        
@@ -73,6 +74,7 @@ class PostsTableSeeder extends Seeder
 
         $post = new Post();
         $post->title = "ACESI SE PRONUNCIA ANTE CRISIS DE HOSPITALES EN COLOMBIA";
+        $post->url = Str::slug("ACESI SE PRONUNCIA ANTE CRISIS DE HOSPITALES EN COLOMBIA", '-');
         $post->excerpt = "Por medio de un comunicado de prensa la Directora General de la Asociación Colombiana de Empresas Sociales del Estado y Hospitales Públicos ACESI, doctora Olga Lucia Zuluaga";
         $post->body = "<p>Por medio de un comunicado de prensa la Directora General de la Asociación Colombiana de Empresas Sociales del Estado y Hospitales Públicos ACESI, doctora Olga Lucia Zuluaga, manifestó la difícil situación que afrontan los hospitales del país ante el tercer pico de pandemia por Covid – 19, al cual se enfrentan sin los recursos necesarios<p/>.
         <p>La Directora Ejecutiva de ACESI denunció que “Ya no se trata solo de la enorme deuda multimillonaria que tienen las EPS, la cual supera los 6.5 billones de pesos y cada día crece más, ahora los hospitales públicos están contra las cuerdas, por cuenta de la tercera ola de contagio de Covid-19 y por el no giro de recursos para la mayoría de hospitales por conceptos de toma de muestras COVID, ni del anticipo para iniciar la vacunación”</p>
@@ -84,6 +86,7 @@ class PostsTableSeeder extends Seeder
 
         $post = new Post();
         $post->title = "CONCLUYÓ SATISFACTORIAMENTE JORNADA DE CAPACITACIÓN SOBRE FACTURACIÓN ELECTRÓNICA";
+        $post->url = Str::slug("CONCLUYÓ SATISFACTORIAMENTE JORNADA DE CAPACITACIÓN SOBRE FACTURACIÓN ELECTRÓNICA", '-');
         $post->excerpt = "Con una activa participación se desarrollaron las jornadas de capacitación sobre Nómina Electrónica en el marco de la resolución 013 del 11 de febrero de 2021";
         $post->body = "<p>Con una activa participación se desarrollaron las jornadas de capacitación sobre Nómina Electrónica en el marco de la resolución 013 del 11 de febrero de 2021, y Nueva Normatividad para la Facturación en el Sector Salud en el marco de la Resolución 084 del 28 de enero de 2021 emitida por el Ministerio de Salud, realizadas los días 7 y 8 de marzo, respectivamente.</p>
         <p>Las capacitaciones fueron dirigidas por el ingeniero José Valbuena Benavides, Ingeniero de Sistemas, con más de 15 de años de experiencia al servicio de la DIAN, destacándose como gerente de Facturación Electrónica en la entidad, quien abordó los aspectos jurídicos, técnicos, operativos y la agenda de implementación de cada una de las resoluciones mencionadas en el ámbito de la nómina facturación electrónica.</p>

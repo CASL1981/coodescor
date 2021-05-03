@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<title>@yield('page-title', config('app.name', 'Laravel'))</title>
+		
+		{{-- Longitud recomendada entre 150 y 160 caracteres --}}
+        <meta name="description" content="@yield('meta-content', 'Pagina web COODESCOR')"> 
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
         <script>
             addEventListener("load", function () {
                 setTimeout(hideURLbar, 0);
@@ -40,7 +45,7 @@
     </head>
     <body>
     <!-- header -->
-	 	@include('partials.topbar')
+	 	{{-- @include('partials.topbar') --}}
 	<!-- //top-bar -->
 
 	<!-- header 2 -->
@@ -60,6 +65,8 @@
 	<!-- JavaScript -->
 	<script src="js/jquery-2.2.3.min.js"></script>
 	<!-- Default-JavaScript-File -->
+	
+	@stack('scripWeb')
 
 	<!-- banner slider -->
 	<script src="js/responsiveslides.min.js"></script>

@@ -1,5 +1,7 @@
 @extends('layouts.web')
 
+@section('page-title', 'COODESCOR | Servicios')
+
 @section('content')
 <!-- banner 2 -->
 <div class="inner-banner-w3ls">

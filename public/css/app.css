@@ -32209,7 +32209,7 @@ select {
 
 .container-services .card-services {
   position: relative;
-  width: 300px;
+  width: 290px;
   height: 500px;
   margin: 20px;
   overflow: hidden;
@@ -32222,7 +32222,7 @@ select {
 
 .container-services .card-services .content-services {
   position: absolute;
-  bottom: -160px;
+  bottom: 0px; /* -160px */
   width: 100%;
   height: 160px;
   display: flex;
@@ -32235,13 +32235,13 @@ select {
   box-shadow: 0 -10px 10px rgbd(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: bottom 0.5s;
-  transition-delay: 0.8s;
+  /* transition-delay: 0.8s; */
 }
 
-.container-services .card-services:hover .content-services {
-  bottom: 0px;
-  transition-delay: 0s;
-}
+/* .container-services .card-services:hover .content-services {
+    bottom: 0px;
+    transition-delay: 0s;
+} */
 
 .container-services .card-services .content-services .contentBx-services h3 {
   color: #005ce2;
@@ -32253,15 +32253,15 @@ select {
   margin: 20px 0 15px;
   line-height: 1.1em;
   transition: 0.5s;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition-delay: 0.6s;
+  /* opacity: 0; */
+  /* transform: translateY(-20px); */
+  /* transition-delay: 0.6s; */
 }
 
-.container-services .card-services:hover .content-services .contentBx-services h3 {
-  opacity: 1;
-  transform: translateY(0px);
-}
+/* .container-services .card-services:hover .content-services .contentBx-services h3 {
+    opacity: 1;
+    transform: translateY(0px);
+} */
 
 .container-services .card-services .content-services .contentBx-services h3 span {
   font-size: 12px;
@@ -32280,14 +32280,14 @@ select {
   margin: 0 10px;
   transform: translateY(40px);
   transition: 0.5s;
-  opacity: 0;
-  transition-delay: calc(0.2s * var(--i));
+  /* opacity: 0; */
+  /* transition-delay: calc(0.2s * var(--i)); */
 }
 
-.container-services .card-services:hover .content-services .sci li {
-  transform: translateY(0px);
-  opacity: 1;
-}
+/* .container-services .card-services:hover .content-services .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+} */
 
 .container-services .card-services .content-services .sci li a {
   color: #005ce2;

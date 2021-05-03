@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\Tag;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -18,7 +19,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+
+        return view('administrator.blog.index', compact('posts'));
     }
 
     /**
@@ -28,10 +31,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        $tags = Tag::all();
+        // $categories = Category::all();
+        // $tags = Tag::all();
 
-        return view('administrator.blog.create', compact('categories', 'tags'));
+        // return view('administrator.blog.create', compact('categories', 'tags'));
     }
 
     /**
@@ -42,33 +45,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(Carbon::has($request->published_at));
-        
-        //validamos los request
-        $this->validate($request, [
-            'title' => 'required',
-            'body' => 'required',
-            'excerpt' => 'required',
-            'category' => 'required',
-            'tag' => 'required'
+        $this->validate($request,[
+            'title' => 'required'
         ]);
-
-        //guardamos el post
-        $post = new Post();
-
-        $post->title = $request->title;
-        $post->excerpt = $request->excerpt;
-        $post->body = $request->body;
-        $post->published_at = Carbon::parse($request->published_at);
-        $post->category_id = $request->category;
-        $post->save();
-
-        //Guardamos los tags
-        $post->tags()->attach($request->tags);
-
-        return back()->with('success', 'Tu publicación ha sido creada');
+        
+        $post = Post::create([
+            'title' => $request->title,
+            'url' => Str::slug($request->title),
+        ]);
+        
+        return redirect()->route('posts.edit', $post);
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -79,18 +67,21 @@ class PostController extends Controller
     {
         //
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
-    }
+        $categories = Category::all();
+        $tags = Tag::all();
 
+        return view('administrator.blog.edit', compact('categories', 'tags', 'post'));
+    }
+    
     /**
      * Update the specified resource in storage.
      *
@@ -98,9 +89,32 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        //validamos los request
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+            'excerpt' => 'required',
+            'category' => 'required',
+            'tags' => 'required',
+            ]);
+
+        
+        //actualizamos el post    
+        $post->title = $request->title;
+        $post->url = Str::slug($request->title);
+        $post->excerpt = $request->excerpt;
+        $post->body = $request->body;
+        $post->published_at = $request->has('published_at') ? Carbon::parse($request->published_at) : null;
+        $post->category_id = $request->category;
+        $post->save();
+    
+        //Guardamos los tags
+        $post->tags()->sync($request->tags);
+    
+        return redirect()->route('posts.edit', $post)->with('success', 'Tu publicación ha sido actualizada');
+        
     }
 
     /**

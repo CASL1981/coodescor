@@ -34,7 +34,7 @@
                         <div class="row mb-4">
                             @foreach ($posts as $post)
                                 <div class="col-md-6 card">
-                                    <a href="{{ route('blog.post', $post->id) }}">
+                                    <a href="{{ route('blog.post', $post->url) }}">
                                         <img src="images/g1.jpg" class="img-fluid" alt="">
                                     </a>
                                     <div class="card-body">
@@ -54,7 +54,7 @@
 
                                         </ul>
                                         <h5 class="card-title ">
-                                            <a href="{{ route('blog.post', $post->id) }}">{{ $post->title }}</a>
+                                            <a href="{{ route('blog.post', $post->url) }}">{{ $post->title }}</a>
                                         </h5>
                                         <p class="card-text">{{ $post->excerpt }}</p>
                                         <div class="read inner mt-4">
@@ -64,7 +64,7 @@
                                             @endforeach
                                         </div>
                                         <div class="read inner mt-4">
-                                            <a href="{{ route('blog.post', $post->id) }}" class="btn btn-sm animated-button victoria-two">Leer Mas</a>
+                                            <a href="{{ route('blog.post', $post->url) }}" class="btn btn-sm animated-button victoria-two">Leer Mas</a>
                                         </div>
                                     </div>
                                 </div>                                
@@ -189,13 +189,13 @@
                                 @foreach ($posts_recent as $post)
                                 <div class="blog-grids row mb-3 text-left">
                                     <div class="col-md-5 blog-grid-left">
-                                        <a href="{{ route('blog.post', $post->id) }}">
+                                        <a href="{{ route('blog.post', $post->url) }}">
 										    <img src="images/g3.jpg" class="img-fluid" alt="">
 									    </a>
                                     </div>
                                     <div class="col-md-7 blog-grid-right">
                                         <h5>
-                                            <a href="{{ route('blog.post', $post->id) }}">{{ $post->title }}</a>
+                                            <a href="{{ route('blog.post', $post->url) }}">{{ $post->title }}</a>
                                         </h5>
                                         <div class="sub-meta">
                                             <span>

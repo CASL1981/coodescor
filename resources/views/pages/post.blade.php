@@ -217,7 +217,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-lg-8 left-blog-info text-left">
                         <div class="card">
                             <a href="#">
-								<img src="/images/banner4.jpg" class="img-fluid" alt="">
+                                @if ($post->Photos->count())
+								    <img src="/images/{{ $post->Photos->first()->url }}" class="img-fluid" alt="">                                    
+                                @endif
 							</a>
                             <div class="card-body">
                                 <ul class="blog-icons my-4">

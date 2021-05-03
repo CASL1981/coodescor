@@ -1,5 +1,7 @@
 @extends('layouts.web')
 
+@section('page-title', 'COODESCOR | PQRS')
+
 @section('content')
 	
 <!-- banner 2 -->

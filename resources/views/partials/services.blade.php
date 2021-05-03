@@ -3,10 +3,8 @@
         <div class="w3ls-titles text-center mb-5 welcome-left">
             <h3>Nuestros Servicios</h3>
             <span>
-                <i class="fas fa-pills text-color-blue"></i>
+                <i class="fas fa-pills"></i>
             </span>
-            
-            <!-- <p class="mt-2 text-white">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
         </div>
         
     </div>
@@ -23,11 +21,11 @@
                             <h3>Venta Medicamentos y Dispositivos Medicos<br><span>Productos de Alta Calidad</span></h3>
                         </a>
                     </div>
-                    <ul class="sci">
+                    {{-- <ul class="sci">
                         <li style="--i:1;"><a href="#"><i class="fab fa-facebook"></i></a></li>
                         <li style="--i:2;"><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li style="--i:3;"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
             <div class="card-services">
@@ -38,11 +36,11 @@
                     <div class="contentBx-services">
                         <h3>Administración de Servicios Farmaceuticos<br><span>Servicio Integral</span></h3>
                     </div>
-                    <ul class="sci">
+                    {{-- <ul class="sci">
                         <li style="--i:1;"><a href="#"><i class="fab fa-facebook"></i></a></li>
                         <li style="--i:2;"><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li style="--i:3;"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
             <div class="card-services">
@@ -53,11 +51,11 @@
                     <div class="contentBx-services">
                         <h3>Seguimiento Farmacoterapeuticos<br><span>Acompañamiento Continuo</span></h3>
                     </div>
-                    <ul class="sci">
+                    {{-- <ul class="sci">
                         <li style="--i:1;"><a href="#"><i class="fab fa-facebook"></i></a></li>
                         <li style="--i:2;"><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li style="--i:3;"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
             <div class="card-services">
@@ -70,11 +68,11 @@
                             <h3>Como Asociarse<br><span>Contactanos</span></h3>
                         </a>
                     </div>
-                    <ul class="sci">
+                    {{-- <ul class="sci">
                         <li style="--i:1;"><a href="#"><i class="fab fa-facebook"></i></a></li>
                         <li style="--i:2;"><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li style="--i:3;"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>

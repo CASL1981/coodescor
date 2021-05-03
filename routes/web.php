@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -39,4 +40,6 @@ require __DIR__.'/auth.php';
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('asociados', PartnerController::class);
     Route::resource('posts', PostController::class);
+    Route::post('posts/{post}/photos', [PhotoController::class, 'store'])->name('admin.post.photos');
+    Route::delete('photos/{photo}', [PhotoController::class, 'destroy'])->name('admin.photos.destroy');
 });
