@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\TagsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +36,8 @@ Route::get('/partner', [PagesController::class, 'Partner'])->name('partner');
 Route::get('/services', [PagesController::class, 'Services'])->name('services');
 Route::get('/pqrs', [PagesController::class, 'PQRS'])->name('pqrs');
 Route::get('/news', [PagesController::class, 'News'])->name('news');
+Route::get('/categories/{category}', [CategoriesController::class, 'show'])->name('categories.show');
+Route::get('/tags/{tag}', [TagsController::class, 'show'])->name('tags.show');
 
 require __DIR__.'/auth.php';
 

@@ -10,11 +10,10 @@ class PagesController extends Controller
 {
     public function blog()
     {
-        $posts = Post::published()->get();
+        $posts = Post::published()->paginate(1);
         $categories = Category::all();
-        $posts_recent = Post::published()->latest()->take(3)->get();
 
-        return view('pages.blog', compact('posts', 'categories', 'posts_recent'));
+        return view('pages.blog', compact('posts', 'categories'));
     }
 
     public function contact()

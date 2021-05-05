@@ -26,8 +26,9 @@
     <section class="banner-bottom-w3layouts">
         <div class="container">
             <div class="inner-sec-w3ls py-3">
-                <h3 class="tittle-wthree text-center mb-lg-5 mb-3">
-                    <span>Nuestro</span> Blog</h3>
+                <div class="title-section text-center pb-md-5 welcome-left">
+                    <h3>Publicaciones con la etiqueta {{$tag->name}}</h3>
+                </div>                
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <!--left-->
                     <div class="col-lg-8 left-blog-info text-left">

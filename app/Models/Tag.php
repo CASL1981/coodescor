@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
+
+    function getRouteKeyName()
+    {
+        return 'name';
+    }
+
+    public function Posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }
