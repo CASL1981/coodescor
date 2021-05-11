@@ -18,8 +18,7 @@
                     <ul class="list-unstyled">
                         <li>
                             <i class="fas fa-location-arrow float-left"></i>
-                            <p class="ml-4">Cooperativa de Entidades de Salud de Cordoba
-                                <span>Lorem ipsum dolor,</span>Monteria,Calle 28A # 23 -03 Barrio San Jóse. </p>
+                            <p class="ml-4">Cooperativa de Entidades de Salud de Cordoba,</span>Monteria, Calle 28A # 23 -03 Barrio San Jóse. </p>
                             <div class="clearfix"></div>
                         </li>
                         <li class="my-3">
@@ -29,7 +28,7 @@
                         </li>
                         <li>
                             <i class="far fa-envelope-open float-left"></i>
-                            <a href="mailto:info@example.com" class="ml-3">mail@example.com</a>
+                            <a href="mailto:comunicaciones@coodescor.org.co" class="ml-3">comunicaciones@coodescor.org.co</a>
                             <div class="clearfix"></div>
                         </li>
                     </ul>
@@ -39,19 +38,22 @@
                     <div class="nav-w3-l">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="index.html">Inicio</a>
+                                <a href="/">Inicio</a>
                             </li>
                             <li class="mt-2">
-                                <a href="about.html">Asociados</a>
+                                <a href="{{ route('partner') }}">Asociados</a>
                             </li>
                             <li class="mt-2">
-                                <a href="gallery.html">Blog</a>
+                                <a href="{{ route('about') }}">Nosotros</a>
                             </li>
                             <li class="mt-2">
-                                <a href="appointment.html">Noticias</a>
+                                <a href="{{ route('blog') }}">Blog</a>
                             </li>
                             <li class="mt-2">
-                                <a href="contact.html">Contactanos</a>
+                                <a href="{{ route('news') }}">Noticias</a>
+                            </li>
+                            <li class="mt-2">
+                                <a href="{{ route('contact') }}">Contactanos</a>
                             </li>
                         </ul>
                     </div>

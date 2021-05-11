@@ -3,14 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\storePostRequest;
+use App\Http\Requests\storeNewsRequest;
 use App\Models\Category;
-use App\Models\Post;
-use App\Models\Tag;
-use Carbon\Carbon;
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class NoticiaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +17,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $news = Noticia::all();
 
-        return view('administrator.blog.index', compact('posts'));
+        return view('administrator.news.index', compact('news'));
     }
 
     /**
@@ -49,11 +47,11 @@ class PostController extends Controller
             'title' => 'required'
         ]);
         
-        $post = Post::create([
+        $news = Noticia::create([
             'title' => $request->title,
         ]);
         
-        return redirect()->route('posts.edit', $post);
+        return redirect()->route('posts.edit', $news);
     }
     
     /**
@@ -73,12 +71,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Noticia $news)
     {
         $categories = Category::all();
-        $tags = Tag::all();
 
-        return view('administrator.blog.edit', compact('categories', 'tags', 'post'));
+        return view('administrator.news.edit', compact('categories', 'news'));
     }
     
     /**
@@ -88,16 +85,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(storePostRequest $request, Post $post)
+    public function update(storeNewsRequest $request, Noticia $news)
     {
-        //actualizamos el post    
-        $post->update($request->all());
-        
-        // dd($request->tags);
-        //Guardamos los tags
-        $post->syncTags($request->tags);
-    
-        return redirect()->route('posts.edit', $post)->with('success', 'Tu publicación ha sido actualizada');
+        //actualizamos la noticia
+        $news->update($request->all());
+            
+        return redirect()->route('news.edit', $news)->with('success', 'Tu publicación ha sido actualizada');
         
     }
 

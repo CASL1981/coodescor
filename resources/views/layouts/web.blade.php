@@ -63,13 +63,14 @@
     
     <!-- Js files -->	
 	<!-- JavaScript -->
-	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 	<!-- Default-JavaScript-File -->
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	
 	@stack('scripWeb')
 
 	<!-- banner slider -->
-	<script src="js/responsiveslides.min.js"></script>
+	<script src="{{ asset('js/responsiveslides.min.js') }}"></script>
 	<script>
 		$(function () {
 			$("#slider4").responsiveSlides({
@@ -90,19 +91,18 @@
 	<!-- //banner slider -->
 
 	<!-- fixed navigation -->
-	<script src="js/fixed-nav.js"></script>
+	<script src="{{ asset('js/fixed-nav.js') }}"></script>
 	<!-- //fixed navigation -->
 
 	<!-- smooth scrolling -->
 	<!-- <script src="js/SmoothScroll.min.js"></script> -->
 	<!-- move-top -->
-	<script src="js/move-top.js"></script>
+	<script src="{{ asset('js/move-top.js') }}"></script>
 	<!-- easing -->
-	<script src="js/easing.js"></script>
+	<script src="{{ asset('js/easing.js') }}"></script>
 	<!--  necessary snippets for few javascript files -->
-	<script src="js/medic.js"></script>
+	<script src="{{ asset('js/medic.js') }}"></script>
 
-	<script src="js/bootstrap.min.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- //Js files -->

@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         \App\Models\Partner::factory(15)->create();
         $this->call(PostsTableSeeder::class);
+        $this->call(NoticiasTableSeeder::class);
     }
 }

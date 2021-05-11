@@ -4,12 +4,8 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-navi">
             <div class="container">
                 <!-- logo -->
-                <img style="width: 90px; height: 70px;" src="{{ asset('images/logo.png') }}" alt="logo">
-                {{-- <h1>
-                    <a class="navbar-brand font-weight-bold font-italic" href="#">
-                        <span>C</span>oodescor
-                    </a>
-                </h1> --}}
+                <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo">
+                
                 <!-- //logo -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

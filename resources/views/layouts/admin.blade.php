@@ -152,7 +152,7 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">Panel</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+        <li class="active"><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Panel de Inicio</span></a></li>
         <li class="treeview {{ request()->is('admin/posts*') ? 'active' : '' }}">
           <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i><span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
@@ -162,6 +162,18 @@ desired effect
             </li>
             <li {{ request()->is('admin/posts') ? 'class=active' : '' }} ><a href="{{ route('posts.index') }}">
               <i class="fa fa-eye"></i>Ver todas las Publicaciones</a>
+            </li>
+          </ul>
+        </li>
+        <li class="treeview {{ request()->is('admin/news*') ? 'active' : '' }}">
+          <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Noticias</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li {{ request()->is('admin/news/create') ? 'class=active' : '' }} >
+              <a href="#" data-toggle="modal" data-target="#crearPost">
+              <i class="fa fa-plus-circle"></i>Crear Publicación</a>
+            </li>
+            <li {{ request()->is('admin/news') ? 'class=active' : '' }} ><a href="{{ route('news.index') }}">
+              <i class="fa fa-eye"></i>Ver todas las Noticias</a>
             </li>
           </ul>
         </li>
