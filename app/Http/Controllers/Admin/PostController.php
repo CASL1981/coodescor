@@ -7,8 +7,8 @@ use App\Http\Requests\storePostRequest;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -51,6 +51,7 @@ class PostController extends Controller
         
         $post = Post::create([
             'title' => $request->title,
+            'url' => Str::slug($request->title),
         ]);
         
         return redirect()->route('posts.edit', $post);

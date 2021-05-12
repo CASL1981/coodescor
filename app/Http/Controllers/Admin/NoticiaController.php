@@ -7,6 +7,7 @@ use App\Http\Requests\storeNewsRequest;
 use App\Models\Category;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class NoticiaController extends Controller
 {
@@ -49,9 +50,10 @@ class NoticiaController extends Controller
         
         $news = Noticia::create([
             'title' => $request->title,
+            'url' => Str::slug($request->title),
         ]);
         
-        return redirect()->route('posts.edit', $news);
+        return redirect()->route('news.edit', $news);
     }
     
     /**

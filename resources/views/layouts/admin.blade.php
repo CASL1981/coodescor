@@ -63,9 +63,9 @@ desired effect
     <!-- Logo -->
     <a href="{{ route('dashboard') }}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>C</b>D</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>C</b>oodescor</span>
     </a>
 
     <!-- Header Navbar -->
@@ -82,14 +82,14 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
+              <img src="{{ asset('images/logo.png') }}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">{{ auth()->user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('images/logo.png') }}" class="img-circle" alt="User Image">
 
                 <p>
                   {{ auth()->user()->name }}
@@ -139,7 +139,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+          <img src="{{ asset('images/logo.png') }}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>{{ auth()->user()->name }}</p>
@@ -169,8 +169,8 @@ desired effect
           <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Noticias</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li {{ request()->is('admin/news/create') ? 'class=active' : '' }} >
-              <a href="#" data-toggle="modal" data-target="#crearPost">
-              <i class="fa fa-plus-circle"></i>Crear Publicación</a>
+              <a href="#" data-toggle="modal" data-target="#crearNews">
+              <i class="fa fa-plus-circle"></i>Crear Noticia</a>
             </li>
             <li {{ request()->is('admin/news') ? 'class=active' : '' }} ><a href="{{ route('news.index') }}">
               <i class="fa fa-eye"></i>Ver todas las Noticias</a>
@@ -240,5 +240,6 @@ desired effect
      fixed layout. -->
 
 @include('administrator.blog.create')
+@include('administrator.news.create')
 </body>
 </html>

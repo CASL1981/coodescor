@@ -22,7 +22,7 @@
                 <h5 class="card-title ">
                     <a href="#">{{ $news->title }}</a>
                 </h5>
-                <p class="card-text">{!! $news->body !!}</p>
+                {!! $news->body !!}
 
             </div>
         </div>

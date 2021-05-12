@@ -11,10 +11,11 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $posts = Post::published()->latest()->take(3)->get();        
-        $categories = Category::all();
+        $posts = Post::published()->latest()->take(3)->get();
+        $noticias = Noticia::published()->latest()->take(3)->get();
+        // $categories = Category::all();
 
-        return view('welcome', compact('posts', 'categories'));
+        return view('welcome', compact('posts', 'noticias'));
     }
 
     public function blog()

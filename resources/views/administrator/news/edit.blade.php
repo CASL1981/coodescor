@@ -18,7 +18,7 @@
     <div class="box box-primary">
         <div class="box-body">
             <div class="row">
-                <form action="{{ route('admin.photos.update', $news) }}"  method="POST">
+                <form action="{{ route('admin.news.photos.update', $news) }}"  method="POST">
                     @csrf
                     @method('PUT')
                     <div class="col-md-2">
@@ -85,15 +85,6 @@
                         </select>
                         {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
                     </div>
-                    {{-- <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">
-                        <label>Etiquetas</label>
-                        <select name="tags[]" class="form-control select2" multiple="multiple" data-placeholder="Selecciona una o varias etiquetas" style="width: 100%;">
-                            @foreach ($tags as $tag)
-                            <option {{ collect(old('tags', $news->tags->pluck('id')))->contains($tag->id) ? 'selected' : '' }} value="{{ $tag->id }}">{{ $tag->name }}</option>
-                            @endforeach                          
-                        </select>
-                        {!! $errors->first('tags', '<span class="help-block">:message</span>') !!}
-                    </div> --}}
                     <div class="form-group {{ $errors->has('excerpt') ? 'has-error' : '' }}">
                         <label for="excerpt">Extracto de la publicación</label>
                         <textarea name="excerpt" class="form-control" >{{ old('excerpt', $news->excerpt) }}</textarea>
@@ -153,7 +144,7 @@
             url: '/admin/news/{{ $news->url }}/photos',
             paramName: 'photo',
             acceptedFiles: 'image/*',
-            maxFilesize: 1,
+            maxFilesize: 2,
             maxFiles: 1,
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'

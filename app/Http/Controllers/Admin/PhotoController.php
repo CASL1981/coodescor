@@ -34,7 +34,7 @@ class PhotoController extends Controller
         ]);
 
         //capturamos el achivo enviado
-        $photo = request()->file('photo')->store('blog');
+        $photo = request()->file('photo')->store('news');
         
         $news->photo = $photo;
         $news->save();
@@ -47,6 +47,17 @@ class PhotoController extends Controller
         $post->photo = null;
         $post->title = $post->title;
         $post->save();
+
+        return back()->with('success', 'Foto Eliminada');
+    }
+
+    public function deleteNews(Noticia $news)
+    {
+        Storage::delete($news->photo);
+
+        $news->photo = null;
+        $news->title = $news->title;
+        $news->save();
 
         return back()->with('success', 'Foto Eliminada');
     }
