@@ -20,7 +20,8 @@ class CreateNoticiasTable extends Migration
             $table->mediumText('excerpt')->nullable();
             $table->text('body')->nullable();
             $table->timestamp('published_at')->nullable();
-            $table->unsignedBigInteger('category_id')->nullable();            
+            $table->unsignedBigInteger('category_news_id')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->string('photo')->nullable();
             $table->timestamps();
         });

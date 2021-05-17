@@ -14,13 +14,9 @@
                         <a href="#">
                             <i class="far fa-calendar-alt"></i> {{ $news->published_at->format('d M Y')}}</a>
                     </li>
-                    <li class="mx-2">
-                        <a href="#">
-                            <i class="far fa-comment"></i> 21</a>
-                    </li>
                 </ul>
                 <h5 class="card-title ">
-                    <a href="#">{{ $news->title }}</a>
+                    <a href="{{ route('news.post', $news->url) }}">{{ $news->title }}</a>
                 </h5>
                 {!! $news->body !!}
 

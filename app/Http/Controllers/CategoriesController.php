@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
+use App\Models\Post;
 
 class CategoriesController extends Controller
 {
@@ -11,7 +11,8 @@ class CategoriesController extends Controller
     {
         $posts = $category->Posts()->paginate(4);
         $categories = Category::all();
+        $recentposts = Post::published()->latest()->take(3)->get();
 
-        return view('pages.postsCategories', compact('posts', 'category', 'categories'));
+        return view('pages.postsCategories', compact('posts', 'category', 'categories', 'recentposts'));
     }
 }

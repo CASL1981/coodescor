@@ -35,6 +35,11 @@ class Noticia extends Model
         return $this->hasMany(Photo::class);
     }
 
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
     public function scopePublished($query)
     {
         $query->whereNotNull('published_at')

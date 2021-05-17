@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\NoticiaController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\CategoryNewsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\TagsController;
 use App\Models\Noticia;
@@ -41,9 +43,11 @@ Route::get('/about', [PagesController::class, 'About'])->name('about');
 Route::get('/partner', [PagesController::class, 'Partner'])->name('partner');
 Route::get('/services', [PagesController::class, 'Services'])->name('services');
 Route::get('/pqrs', [PagesController::class, 'PQRS'])->name('pqrs');
-Route::get('/news', [PagesController::class, 'News'])->name('news');
+Route::get('/news', [PagesController::class, 'pagesNews'])->name('news');
 Route::get('/categories/{category}', [CategoriesController::class, 'show'])->name('categories.show');
+Route::get('/news/categories/{category}', [CategoryNewsController::class, 'show'])->name('news.categories.show');
 Route::get('/tags/{tag}', [TagsController::class, 'show'])->name('tags.show');
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 
 require __DIR__.'/auth.php';
 

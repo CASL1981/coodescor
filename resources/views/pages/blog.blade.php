@@ -17,13 +17,14 @@
                             </li>
                             <li class="mx-2">
                                 <a href="#">
-                                <i class="far fa-comment"></i> 21</a>
+                                <i class="far fa-comment"></i> {{ $post->comments()->count() }}</a>
                             </li>
                         </ul>
                         <h5 class="card-title ">
                             <a href="{{ route('blog.post', $post->url) }}">{{ $post->title }}</a>
                         </h5>
                         <p class="card-text">{{ $post->excerpt }}</p>
+                        <i class="fas fa-user mr-2"></i>Posteado por {{ $post->owner->name }}</a>
                         <div class="read inner mt-4">
                             @foreach ($post->tags as $tag)
                                 <a href="{{ route('tags.show', $tag) }}" class="badge badge-secondary">#{{ $tag->name }}</a>                                                

@@ -10,7 +10,7 @@
                 <ul class="blog-icons my-4">
                     <li>
                         <a href="#">
-                            <i class="far fa-calendar-alt"></i> {{ $post->published_at->format('d M Y')}}</a>
+                            <i class="far fa-calendar-alt"></i> {{ optional($post->published_at)->format('d M Y')}}</a>
                     </li>
                     <li class="mx-2">
                         <a href="#">
@@ -25,36 +25,32 @@
             </div>
         </div>
         <div class="comment-top">
-            <h4>Comments</h4>
-            <div class="media">
-                <img src="/images/t2.jpg" alt="" class="img-fluid">
-                <div class="media-body">
-                    <h5 class="mt-0">Joseph Goh</h5>
-                    <p>Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros. Cras a ornare elit.</p>
-
-                    <div class="media mt-3">
-                        <a class="d-flex pr-3" href="#">
-                            <img src="/images/t2.jpg" alt="" class="img-fluid">
-                        </a>
-                        <div class="media-body">
-                            <h5 class="mt-0">Richard Spark</h5>
-                            <p>Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros. Cras a ornare elit.</p>
-                        </div>
+            <h4>Commentarios</h4>
+            @foreach ($post->comments as $comment)
+                <div class="media">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{ $comment->name }}</h5>
+                        <p>{{ $comment->message }}</p>
                     </div>
-                </div>
-            </div>
+                </div>                
+            @endforeach
         </div>
         <div class="comment-top">
-            <h4>Leave a Comment</h4>
+            <h4>realizar Comentario</h4>
             <div class="comment-bottom">
-                <form action="#" method="post">
-                    <input class="form-control" type="text" name="Name" placeholder="Name" required="">
-                    <input class="form-control" type="email" name="Email" placeholder="Email" required="">
-
-                    <input class="form-control" type="text" name="Subject" placeholder="Subject" required="">
-
-                    <textarea class="form-control" name="Message" placeholder="Message..." required=""></textarea>
-                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                <form action="{{ route('comments.store') }}" method="POST">
+                    @csrf
+                    <input class="form-control" type="text" name="name" placeholder="Nombre y Apellido" required=""
+                    value="{{ old('name') }}">
+                    {!! $errors->first('title', '<span class="help-block">:message</span>') !!}
+                    <input class="form-control" type="email" name="email" placeholder="Email" required="">
+                    {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                    <input class="form-control" type="text" name="subject" placeholder="Asunto" required="">
+                    {!! $errors->first('subject', '<span class="help-block">:message</span>') !!}
+                    <textarea class="form-control" name="message" placeholder="Mensage..." required=""></textarea>
+                    {!! $errors->first('message', '<span class="help-block">:message</span>') !!}
+                    <input type="text" name="post_id" value="{{ $post->id }}" hidden="true">
+                    <button type="submit" class="btn btn-primary submit">Enviar</button>
                 </form>
             </div>
         </div>

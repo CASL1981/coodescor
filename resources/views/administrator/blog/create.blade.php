@@ -11,8 +11,8 @@
           </div>
           <div class="modal-body">
             <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">                
-                <input type="text" name="title" class="form-control" required
-                value="{{ old('title') }}"
+                <input type="text" name="title" class="form-control" id="post-title"
+                value="{{ old('title') }}" autofocus required
                 placeholder="Ingresa el titulo de la publicación">
                 {!! $errors->first('title', '<span class="help-block">:message</span>') !!}
             </div>

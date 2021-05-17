@@ -26,27 +26,6 @@
 <body>
     <div class="header-top-w3layouts">
         <header>
-            {{-- <div class="top-head text-left container-fluid">
-                <div class="row honey-leo">
-                     <div class="col-md-6 left-info footer-grid-w3ls">
-                           <ul class="social mt-lg-0 mt-3 d-flex">
-                                <li class="mr-1"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                <li class="mx-1"><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                <li class="mx-1"><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
-                                <li class="mx-1"><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-
-                            </ul>
-                    </div>
-                    <div class="col-md-6 right-p text-right">
-                        <ul>
-                            <li>
-                               <span class="fas fa-phone-volume"></span> 0098-765-4321</li>
-                            <li>
-                                <span class="far fa-clock"></span> ( Mon-Fri 9am - 8pm ) ( Sat-Sun 10am - 6pm )</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> --}}
           <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="logo-w3">
                     <h1>
@@ -106,14 +85,13 @@
     <div class="container">
         <div class="inner-sec-w3ls py-lg-5">
             <h3 class="tittle-wthree text-center mb-lg-5 mb-3">Noticias</h3>
-            <div class="row mt-lg-5 mt-md-4 mt-4">
+            <div class="row">
                 @yield('content')
     
                 {{-- aside --}}
                 @include('partials.news.aside')
                 {{-- end aside --}}
             </div>
-
         </div>
     </div>
 </section>

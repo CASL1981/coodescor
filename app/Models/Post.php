@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use phpDocumentor\Reflection\Types\Boolean;
 
 class Post extends Model
 {
@@ -25,6 +26,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function Comments()
+    {
+        return $this->hasMany(comment::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
@@ -35,6 +41,11 @@ class Post extends Model
         return $this->hasMany(Photo::class);
     }
 
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
     public function scopePublished($query)
     {
         $query->whereNotNull('published_at')
@@ -42,7 +53,12 @@ class Post extends Model
                 ->orderBy('published_at', 'DESC');
     }
 
-    public function setNameAttribute($title)
+    public function isPublished()
+    {
+        return ! is_null($this->published_at) && $this <= today();
+    }
+
+    public function setTitleAttribute($title)
     {
         $this->attributes['title'] = $title;
         $this->attributes['url'] = Str::slug($title);

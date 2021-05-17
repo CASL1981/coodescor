@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\CategoryNews;
 use App\Models\Noticia;
 use App\Models\Partner;
 use App\Models\Post;
@@ -20,7 +21,7 @@ class PagesController extends Controller
 
     public function blog()
     {
-        $posts = Post::published()->paginate(2);
+        $posts = Post::published()->paginate(4);
         $categories = Category::all();
         $recentposts = Post::published()->latest()->take(3)->get();
 
@@ -33,16 +34,22 @@ class PagesController extends Controller
     }
 
     public function post(Post $post)
-    {       
-        $categories = Category::all();
+    {   
+        if($post->isPublished() || auth()->check())
+        {
+            $categories = Category::all();
+            $recentposts = Post::published()->latest()->take(3)->get();
+    
+            return view('pages.post', compact('post','categories', 'recentposts'));
+        }
 
-        return view('pages.post', compact('post','categories'));
+        abort(404);
     }
 
     public function news(Noticia $news)
     {       
         $categories = Category::all();        
-        $recentnews = Post::published()->latest()->take(3)->get();
+        $recentnews = Noticia::published()->latest()->take(3)->get();
 
         return view('pages.news', compact('news','categories', 'recentnews'));
     }
@@ -71,10 +78,10 @@ class PagesController extends Controller
 
     public function pagesNews()
     {
-        $news = Noticia::published()->paginate(2);
-        $categories = Category::all();
-        $recentnews = Post::published()->latest()->take(3)->get();
+        $news = Noticia::published()->paginate(4);
+        $categories = CategoryNews::all();
+        $recentnews = Noticia::published()->latest()->take(3)->get();
 
-        return view('pages.news', compact('news', 'categories', 'recentnews'));
+        return view('pages.pagesNews', compact('news', 'categories', 'recentnews'));
     }
 }

@@ -157,8 +157,13 @@ desired effect
           <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i><span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li {{ request()->is('admin/posts/create') ? 'class=active' : '' }} >
-              <a href="#" data-toggle="modal" data-target="#crearPost">
-              <i class="fa fa-plus-circle"></i>Crear Publicación</a>
+              @if (request()->is('admin/posts/*'))
+                <a href="{{ route('posts.index', '#createpost') }}" data-toggle="modal" data-target="#crearPost">
+                <i class="fa fa-plus-circle"></i>Crear Publicación</a>                  
+              @else
+                <a href="#" data-toggle="modal" data-target="#crearPost">
+                <i class="fa fa-plus-circle"></i>Crear Publicación</a>                  
+              @endif
             </li>
             <li {{ request()->is('admin/posts') ? 'class=active' : '' }} ><a href="{{ route('posts.index') }}">
               <i class="fa fa-eye"></i>Ver todas las Publicaciones</a>
@@ -241,5 +246,22 @@ desired effect
 
 @include('administrator.blog.create')
 @include('administrator.news.create')
+
+  {{-- <script>
+    if(window.location.hash === '#createpost')
+    {
+      $('#crearPost').modal('show');
+    };
+
+    $('#crearPost').on('hide.bs.modal', function(){
+      window.location.hash = '#';
+    });
+
+    $('#crearPost').on('shown.bs.modal', function(){
+      $('#post-title').focus();
+      window.location.hash = '#crearPost';
+    });
+  </script>     --}}
+
 </body>
 </html>

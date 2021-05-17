@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\comment;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
@@ -25,6 +26,7 @@ class PostsTableSeeder extends Seeder
         Category::truncate();
         Tag::truncate();
         User::truncate();
+        comment::truncate();
 
         $user = new User();
         $user->name = "Carlos Sibaja";
@@ -72,6 +74,7 @@ class PostsTableSeeder extends Seeder
         <p>Finalmente, la Gerente de Coodescor, agradeció a cada uno de los Líderes por su disposición y apoyo en la consecución de los objetivos de la gestión social, adelantada por la Cooperativa para el beneficio de sus Entidades Asociadas.</p>";
         $post->published_at = Carbon::now()->subDays(1);
         $post->category_id = 1;
+        $post->user_id = 1;
         $post->save();
 
         $post = new Post();
@@ -84,6 +87,7 @@ class PostsTableSeeder extends Seeder
         <p>Ante esta situación la doctora Olga Lucia Zuluaga hace un llamado urgente al gobierno nacional para agilizar la normatividad correspondiente para la pronta realización de los pagos por concepto de vacunación, así mismo resaltó la importancia de dar celeridad al acuerdo de punto final, para que los prestadores logren “alivianar sus carteras y con esto responder en forma oportuna a los grandes retos que exige la pandemia y la atención de las otras patologías”</p>";
         $post->published_at = Carbon::now()->subDays(2);
         $post->category_id = 3;
+        $post->user_id = 1;
         $post->save();
 
         $post = new Post();
@@ -95,7 +99,32 @@ class PostsTableSeeder extends Seeder
         <p>Coodescor continuará brindando las diferentes acciones de formación bajo la modalidad virtual, con el fin de prevenir los contagios de Covid 19 y cuidar la salud de los funcionarios de las ESEs asociadas, para contribuir al crecimiento y fortalecimiento de las mismas.</p>";
         $post->published_at = Carbon::now()->subDays(3);
         $post->category_id = 2;
+        $post->user_id = 1;
         $post->save();
+
+        $comment = new comment();
+        $comment->name = "Samuel Sibaja";
+        $comment->email = "samuelsibbaja@gamil.com";
+        $comment->subject = "Buena publicación";
+        $comment->message = "Que debo hacer en caso de necesitar comunicarme con los QF";
+        $comment->post_id = 1;
+        $comment->save();
+
+        $comment = new comment();
+        $comment->name = "Saul Sibaja";
+        $comment->email = "saulsibbaja@gamil.com";
+        $comment->subject = "Comentario de publicación";
+        $comment->message = "puedo vacunarme comunicarme con los QF";
+        $comment->post_id = 2;
+        $comment->save();
+
+        $comment = new comment();
+        $comment->name = "Saul Sibaja";
+        $comment->email = "saulsibbaja@gamil.com";
+        $comment->subject = "Comentario 2";
+        $comment->message = "Segundo comentario";
+        $comment->post_id = 1;
+        $comment->save();
 
     }
 }

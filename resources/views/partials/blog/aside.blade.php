@@ -27,7 +27,7 @@
                     </a>
                     </div>
                     <div class="col-md-7 blog-grid-right">
-                        <h5><a href="#">{{ $post->title }}</a></h5>
+                        <h5><a href="{{ route('blog.post', $post->url) }}">{{ $post->title }}</a></h5>
                         <div class="sub-meta">
                             <span>
                             <i class="far fa-clock"></i> {{ $post->published_at->format('d M Y') }}</span>

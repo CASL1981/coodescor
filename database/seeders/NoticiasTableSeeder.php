@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\comment;
 use App\Models\Noticia;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -32,7 +33,8 @@ class NoticiasTableSeeder extends Seeder
         <p>Pero los investigadores advierten, no considerar estos hallazgos como justificación para realizar sistemáticamente un examen de electrocardiograma en reposo en todo adulto con diabetes. Los pacientes con diabetes son muy heterogéneos, lo cual dificulta implementar una recomendación uniforme para la evaluación electrocardiográfica de pacientes con diabetes.</p>
         </p>La falta actual de recomendaciones a nivel general es aceptable, pues permite a pacientes y médicos discutir los problemas y decidir respecto a la utilidad de un electrocardiograma en su situación específica, señalan los investigadores. Pero también señalaron: Cuantos más factores de riesgo tenga un paciente con diabetes para cardiopatía estructural, fibrilación auricular o ictus por fibrilación auricular más debe considerar un médico si es adecuado un electrocardiograma inicial y el seguimiento futuro.</p>";
         $post->published_at = Carbon::now()->subDays(1);
-        $post->category_id = 1;
+        $post->category_news_id = 1;
+        $post->user_id = 1;
         $post->save();
 
         $post = new Noticia();
@@ -43,7 +45,8 @@ class NoticiasTableSeeder extends Seeder
         <p>Las diferentes  ESEs asociadas a Coodescor han demostrado su capacidad logística y compromiso con la Salud al implementar diferentes campañas que permiten dar a conocer a la población los cronogramas de vacunación para adultos mayores, adecuando sus instalaciones para la administración de esta y disponiendo de personal capacitado para realizar diferentes jornadas tanto en zonas urbanas  como rurales, descentralizando este proceso de inmunización para brindar una mayor cobertura y facilitar el acceso a la comunidad objeto.</p>
         <p>Coodescor resalta el importante trabajo de las ESEs asociadas para lograr el cumplimiento del Plan de Vacunación con el que se brinda a comunidades de alto riesgo la protección necesaria ante este virus que ha cobrado múltiples vidas en todo el mundo.</p>";
         $post->published_at = Carbon::now()->subDays(2);
-        $post->category_id = 3;
+        $post->category_news_id = 2;
+        $post->user_id = 1;
         $post->save();
 
         $post = new Noticia();
@@ -53,7 +56,8 @@ class NoticiasTableSeeder extends Seeder
         $post->body = "<p>En un acto de reconocimiento y conmemoración la Cooperativa de Entidades de Salud de Córdoba obsequió a las mujeres de las ESEs asociadas activas, tortas para compartir y detalles para rifar en el Día Internacional de la Mujer, realizado todos los años en el mes de marzo.</p>
         <p>Estos detalles fueron enviados a cada una de las ESEs gracias a los recursos del Fondo de Recreación y Deportes con el cual Coodescor apoya la celebración de fechas especiales y la participación de funcionarios de las entidades asociadas en eventos o torneos deportivos, talleres de lúdica y actividades culturales que promuevan estilos de vida saludables.</p>";
         $post->published_at = Carbon::now()->subDays(3);
-        $post->category_id = 2;
+        $post->category_news_id = 2;
+        $post->user_id = 1;
         $post->save();
     }
 }

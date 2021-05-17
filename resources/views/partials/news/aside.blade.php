@@ -7,10 +7,10 @@
             <h4>Categorias</h4>
             <ul class="list-group single">
                 @foreach ($categories as $category)
-                    <a href="{{ route('categories.show', $category) }}">
+                    <a href="{{ route('news.categories.show', $category) }}">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ $category->name }}                                            
-                            <span class="badge badge-primary badge-pill">{{ $category->Posts()->count() }}</span>
+                            <span class="badge badge-primary badge-pill">{{ $category->News()->count() }}</span>
                         </li>
                     </a>
                 @endforeach                                    
@@ -26,7 +26,7 @@
                     </a>
                     </div>
                     <div class="col-md-7 blog-grid-right">
-                        <h5><a href="#">{{ $news->title }}</a></h5>
+                        <h5><a href="{{ route('news.post', $news->url) }}">{{ $news->title }}</a></h5>
                         <div class="sub-meta">
                             <span>
                             <i class="far fa-clock"></i> {{ $news->published_at->format('d M Y') }}</span>

@@ -21,9 +21,10 @@
                         </h3>
                     </div>
                     <div class="price-bottom p-4">
-                        <h4 class="text-dark mb-3"><p>{{ $news->title }}</p></h4>
-                        {{-- <a href="single.html">
-                            <i class="fas fa-user mr-2"></i>Posted by accusantium</a> --}}
+                        <a href="{{ route('news.post', $news->url) }}">
+                            <h4 class="text-dark mb-3"><p>{{ $news->title }}</p></h4>                        
+                            <i class="fas fa-user mr-2"></i>Publicada por {{ $news->owner->name }}</a>
+                        </a>
                     </div>
                 </div>                
             @endforeach
@@ -48,41 +49,13 @@
                     </h3>
                 </div>
                 <div class="price-bottom p-4">
-                    <h4 class="text-dark mb-3 text-capitalize"><p>{{ $post->title }}</p></h4>
-                    {{-- <i class="fas fa-user mr-2"></i>Posted by accusantium</a> --}}
+                    <a href="{{ route('blog.post', $post->url) }}">
+                        <h4 class="text-dark mb-3 text-capitalize"><p>{{ $post->title }}</p></h4>
+                        <i class="fas fa-user mr-2"></i>Posteado por {{ $post->owner->name }}</a>
+                    </a>
                 </div>
             </div>                
-            @endforeach
-            {{-- <div class="col-md-4 pricing my-md-0 my-5">
-                <div class="price-top">
-                    <a href="single.html">
-                        <img src="images/blog2.jpg" alt="" class="img-fluid" />
-                    </a>
-                    <h3>24
-                        <span>August</span>
-                    </h3>
-                </div>
-                <div class="price-bottom p-4">
-                    <h4 class="text-dark mb-3">Titulo Post 2</h4>
-                    <a href="single.html">
-                        <i class="fas fa-user mr-2"></i>Posted by accusantium</a>
-                </div>
-            </div>
-            <div class="col-md-4 pricing">
-                <div class="price-top">
-                    <a href="single.html">
-                        <img src="images/blog3.jpg" alt="" class="img-fluid" />
-                    </a>
-                    <h3>30
-                        <span>August</span>
-                    </h3>
-                </div>
-                <div class="price-bottom p-4">
-                    <h4 class="text-dark mb-3">Post 3</h4>
-                    <a href="single.html">
-                        <i class="fas fa-user mr-2"></i>Posted by accusantium</a>
-                </div>
-            </div> --}}
+            @endforeach            
         </div>
         <!-- end blog -->
     </div>

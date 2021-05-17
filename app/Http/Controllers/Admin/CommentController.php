@@ -3,14 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\storePostRequest;
-use App\Models\Category;
-use App\Models\Post;
-use App\Models\Tag;
+use App\Models\comment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-
-        return view('administrator.blog.index', compact('posts'));
+        //
     }
 
     /**
@@ -31,10 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        // $categories = Category::all();
-        // $tags = Tag::all();
-
-        // return view('administrator.blog.create', compact('categories', 'tags'));
+        //
     }
 
     /**
@@ -45,17 +36,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'title' => 'required|min:5',
+
+        $this->validate($request, [
+            'name' => 'required|max:192',
+            'email' => 'required|email|max:192',
+            'subject' => 'required|max:192',
+            'message' => 'required',
+            'post_id' => 'required',
         ]);
-        
-        $post = Post::create([
-            'title' => $request->title,
-        ]);
-        
-        return redirect()->route('posts.edit', $post);
+
+        $comment = comment::create($request->all());
+
+        return redirect()->back();
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -66,21 +60,18 @@ class PostController extends Controller
     {
         //
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        $categories = Category::all();
-        $tags = Tag::all();
-
-        return view('administrator.blog.edit', compact('categories', 'tags', 'post'));
+        //
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -88,16 +79,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(storePostRequest $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //actualizamos el post    
-        $post->update($request->all());
-        
-        //Guardamos los tags
-        $post->syncTags($request->tags);
-    
-        return redirect()->route('posts.edit', $post)->with('success', 'Tu publicación ha sido actualizada');
-        
+        //
     }
 
     /**
