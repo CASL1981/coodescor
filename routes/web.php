@@ -7,7 +7,9 @@ use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\CategoryNewsController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PQRSController;
 use App\Http\Controllers\TagsController;
 use App\Models\Noticia;
 use App\Models\Post;
@@ -48,6 +50,8 @@ Route::get('/categories/{category}', [CategoriesController::class, 'show'])->nam
 Route::get('/news/categories/{category}', [CategoryNewsController::class, 'show'])->name('news.categories.show');
 Route::get('/tags/{tag}', [TagsController::class, 'show'])->name('tags.show');
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/pqrs', [PQRSController::class, 'send'])->name('pqrs.send');
 
 require __DIR__.'/auth.php';
 

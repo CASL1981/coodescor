@@ -247,6 +247,8 @@ desired effect
 @include('administrator.blog.create')
 @include('administrator.news.create')
 
+{{ dd(request()->routeIs('posts.index')) }}
+
   {{-- <script>
     if(window.location.hash === '#createpost')
     {

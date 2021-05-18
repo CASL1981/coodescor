@@ -54,7 +54,6 @@
 	<!-- social media vertical -->
 		@include('partials.socialmedia')
 	<!-- end social media vertical -->
-
 		@yield('content')
 		
 	<!-- footer -->

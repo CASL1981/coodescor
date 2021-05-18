@@ -16,14 +16,19 @@
 		<div aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="/">Home</a>
+					<a href="/">Inicio</a>
 				</li>
 				<li class="breadcrumb-item active" aria-current="page">Contacto</li>
 			</ol>
 		</div>
 	</div>
 	<!-- //page details -->
-
+	
+	@if ($message = Session::get('success'))
+		<div class="alert alert-success">
+			<p>{{ $message }}</p>
+		</div>
+	@endif
 	<!-- contact -->
 	<div class="agileits-contact">
 		<div class="py-lg-3">
@@ -39,27 +44,32 @@
 				</div>
 				<div class="col-lg-7 contact-right-w3l">
 					<!-- <h5 class="title-w3 text-center mb-5">Get In Touch</h5> -->
-					<form action="#" method="post">
+					<form action="{{ route('contact.send') }}" method="post">
+						@csrf
 						<div class="d-flex space-d-flex">
 							<div class="form-group grid-inputs">
-								<input type="text" class="name form-control" name="First Name" placeholder="First Name" required="">
+								<input type="text" class="name form-control" name="firstname" placeholder="Nombres" value="{{ old('firstname') }}">
+								{!! $errors->first('firstname', '<span style="color:red; margin-bottom: 5px;">:message</span>') !!}
 							</div>
 							<div class="form-group grid-inputs">
-								<input type="text" class="name form-control" name="Last Name" placeholder="Last Name" required="">
+								<input type="text" class="name form-control" name="lastname" placeholder="Apellidos" value="{{ old('lastname') }}">
+								{!! $errors->first('lastname', '<span style="color:red; margin-bottom: 5px;">:message</span>') !!}
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="email" class="name form-control" name="Email" placeholder="Email" required="">
+							<input type="email" class="name form-control" name="email" placeholder="Email" value="{{ old('email') }}">
+							{!! $errors->first('email', '<span style="color:red; margin-bottom: 5px;">:message</span>') !!}
 						</div>
 						<div class="form-group">
-							<input type="text" class="name form-control" name="Subject" placeholder="Subject" required="">
-						</div>
-
-						<div class="form-group">
-							<textarea placeholder="Your Message" required="" class="form-control"></textarea>
+							<input type="text" class="name form-control" name="subject" placeholder="Asunto" value="{{ old('subject') }}">
+							{!! $errors->first('subject', '<span style="color:red; margin-bottom: 5px;">:message</span>') !!}
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Send Message">
+							<textarea name="message" placeholder="escribe un mensaje" value="{{ old('message') }}" class="form-control"></textarea>
+							{!! $errors->first('message', '<span style="color:red; margin-bottom: 5px;">:message</span>') !!}
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Enviar Mensaje">
 						</div>
 					</form>
 				</div>
