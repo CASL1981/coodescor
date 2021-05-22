@@ -73,17 +73,17 @@
                             type="text" class="form-control pull-right" id="datepicker">
                         </div>
                     </div>
-                    <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                        <label for="category_id">Categorias</label>
-                        <select name="category_id" id="category_id" class="form-control">
+                    <div class="form-group {{ $errors->has('category_news_id') ? 'has-error' : '' }}">
+                        <label for="category_news_id">Categorias</label>
+                        <select name="category_news_id" id="category_news_id" class="form-control">
                             <option value="">Selecciona una categoria</option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}" 
-                                {{ old('category_id', $news->category_id) == $category->id ? 'selected' : '' }}
+                                {{ old('category_news_id', $news->category_news_id) == $category->id ? 'selected' : '' }}
                                 >{{$category->name}}</option>
                             @endforeach
                         </select>
-                        {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
+                        {!! $errors->first('category_news_id', '<span class="help-block">:message</span>') !!}
                     </div>
                     <div class="form-group {{ $errors->has('excerpt') ? 'has-error' : '' }}">
                         <label for="excerpt">Extracto de la publicación</label>

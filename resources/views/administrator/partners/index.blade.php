@@ -34,7 +34,7 @@
                 <td>{{ $partner->order }}</td>
                 <td>{{ $partner->status ? "Sí" : "No" }}</td>
                 <td>{{ $partner->enabled ? "Habilitado" : "Inhabil" }}</td>
-                <td>{{ $partner->logo }}</td>
+                <td width="10px" height="10px"><img class="img-responsive" src="/images/{{ $partner->logo }}" alt=""></td>
                 <td>
                   <form action="{{ route('asociados.destroy',$partner->id) }}" method="POST">
                       <a class="btn btn-primary btn-xs" href="{{ route('asociados.edit',$partner->id) }}">

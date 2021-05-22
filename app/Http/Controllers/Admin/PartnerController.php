@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PartnerController extends Controller
 {
@@ -42,14 +43,14 @@ class PartnerController extends Controller
     {
 
         $request->validate([
-            'nit' => 'required|integer|max:9|unique:partners',
+            'nit' => 'required|integer|min:9|unique:partners',
             'name' => 'required|string|max:120',
             'address' => 'required|string|max:120',            
         ]);
             
         $partner->create($request->all());
         
-        return redirect()->route('administrator.partner.create')
+        return redirect()->route('asociados.create')
                         ->with('success','Asociado Creado');
     }
 
@@ -96,8 +97,7 @@ class PartnerController extends Controller
 
         $partner->update($request->all());
     
-        return redirect()->route('asociados.index')
-                        ->with('success','Asociados actualizado');
+        return redirect()->back()->with('success','Asociados actualizado');
     }
 
     /**
@@ -114,5 +114,29 @@ class PartnerController extends Controller
     
         return redirect()->route('asociados.index')
                         ->with('success','Asociado Eliminado');
+    }
+
+    public function logo(Partner $partner)
+    {
+        // validamos el tipo de archivos y el tamaño de la imagen
+        $this->validate(request(),[
+            'logo' => 'required|image|max:2048|dimensions:min_width=350,min_height=250',
+        ]);
+
+        //capturamos el achivo enviado
+        $logo = request()->file('logo')->store('logos');
+        
+        $partner->logo = $logo;
+        $partner->save();
+    }
+
+    public function delete(Partner $partner)
+    {
+        Storage::delete($partner->logo);
+
+        $partner->logo = null;
+        $partner->save();
+
+        return back()->with('success', 'Foto Eliminada');
     }
 }

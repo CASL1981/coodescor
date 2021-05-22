@@ -11,7 +11,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PQRSController;
 use App\Http\Controllers\TagsController;
+use App\Models\comment;
 use App\Models\Noticia;
+use App\Models\Partner;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -34,7 +36,9 @@ Route::get('/', [PagesController::class, 'Home']);
 Route::get('/dashboard', function () {
     $posts = Post::all();
     $news = Noticia::all();
-    return view('dashboard', compact('posts', 'news'));
+    $partners = Partner::all();
+    $comments = comment::all();
+    return view('dashboard', compact('posts', 'news', 'partners', 'comments'));
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/blog', [PagesController::class, 'Blog'])->name('blog');
@@ -57,6 +61,8 @@ require __DIR__.'/auth.php';
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('asociados', PartnerController::class);
+    Route::post('news/{partner}/logo', [PartnerController::class, 'logo'])->name('admin.partner.logo');
+    Route::put('news/{partner}', [PartnerController::class, 'delete'])->name('admin.partner.logo.update');
     Route::resource('posts', PostController::class);
     Route::resource('news', NoticiaController::class);
     Route::post('posts/{post}/photos', [PhotoController::class, 'store'])->name('admin.post.photos');

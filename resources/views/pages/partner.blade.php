@@ -38,7 +38,7 @@
                 @foreach ($partners as $item)
                     <li>
                         <a href="#" rel="" class="b-link-stripe b-animate-go  thickbox" title="Medic">
-                            <img src="/images/logos/{{ $item->logo }}" alt="{{ $item->name }}" class="img-fluid" />
+                            <img src="/images/{{ $item->logo ? $item->logo : 'logo.png'}}" alt="{{ $item->name }}" class="img-fluid" />
                             <div>
                                 <h5>{{ $item->name }}</h5>
                                 <span>{{ $item->address }}</span>

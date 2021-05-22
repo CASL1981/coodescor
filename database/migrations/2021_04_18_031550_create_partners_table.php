@@ -18,10 +18,8 @@ class CreatePartnersTable extends Migration
             $table->integer('nit');
             $table->string('name', 112);
             $table->string('address', 112);
-            $table->string('logo', 112);
-            $table->integer('order')->nullable();
-            $table->boolean('status')->default(true);
-            $table->boolean('enabled')->default(true);
+            $table->string('logo')->nullable();
+            $table->integer('order')->nullable()->default(0);
             $table->timestamps();
         });
     }

@@ -24,10 +24,10 @@ class storeNewsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
+            'title' => 'required|min:5',
             'body' => 'required',
             'excerpt' => 'required',
-            'category_id' => 'required',
+            'category_news_id' => 'required',
         ];
     }
 }

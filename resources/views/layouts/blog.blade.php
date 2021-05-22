@@ -120,65 +120,9 @@
 <!-- //blog-->
 
  <!-- footer -->
-<section class="footer py-5">
-	<div class="footer-top-w3layouts py-lg-3">
-		<div class="container">
-			<div class="row footer-grid-w3lss">
-				<div class="col-lg-4 footer-grid-w3ls text-left">
-					<div class="footer-logo-w3">
-						<h3 class="mb-3"><a class="logo-w3" href="/">COODESCOR</a></h3>
-						<p>Lorem ipsum dolor sit amet int consectetur elit. Nam eget init egestas erat. In hachabi tasse platea dictumst. hachabi elit tasse platea dictumst eget init egestas.</p>
-						<ul class="social mt-lg-0 mt-3">
-					<li class="mr-1"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-					<li class="mx-1"><a href="#"><span class="fab fa-twitter"></span></a></li>
-					<li class="mx-1"><a href="#"><span class="fab fa-instagram"></span></a></li>
-				</ul>
-					</div>
-				</div>
-                <div class="col-lg-2 footer-grid-w3ls links text-left">
-					<h3 class="mb-4"> links </h3>
-					<ul>
-						<li>
-							<a href="/">Inicio</a>
-						</li>
-						<li>
-							<a href="{{ route('partner') }}">Asociados</a>
-						</li>
-						<li>
-							<a href="{{ route('about') }}">Nosotros</a>
-						</li>
-						<li>
-							<a href="{{ route('blog') }}">Blog</a>
-						</li>
-						<li>
-							<a href="{{ route('news') }}">Noticias</a>
-						</li>
-						<li>
-							<a href="{{ route('contact') }}">Contactanos</a>
-						</li>
-					</ul>
-				</div>
-                <div class="col-lg-3 footer-grid-w3ls links text-left">
-					<h3 class="mb-4">Contactanos</h3>
-					<ul>
-						<li><strong>Dirrección</strong> : Monteria, Calle 28A # 23 -03 Barrio San Jóse. </li>
-						<li><strong>mobile</strong> : +01(24) 3212 9436</li>
-						<li><strong>Telefono</strong> : (4) 7918080</li>
-						<li><strong>Correo</strong> : <a href="mailto:comunicaciones@coodescor.org.co">comunicaciones@coodescor.org.co</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+    @include('partials.footer')
 <!-- //footer -->
 
-<!-- copyright -->
-<div class="copy_right py-4 text-center">
-    <p>© 2018 Medication. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-	
-</div>
-<!-- //copyright -->
     <!-- js -->
     <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
     <!-- //js -->

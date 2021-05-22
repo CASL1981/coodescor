@@ -25,10 +25,8 @@ class PartnerFactory extends Factory
             'nit' => $this->faker->numberBetween(801000001,801010000),
             'name' => $this->faker->name,
             'address' => $this->faker->address,
-            'logo' => 'coodescor.jpg',
+            'logo' => '',
             'order' => random_int(1,20),
-            'status' => true,
-            'enabled' => true,
         ];
     }
 }

@@ -23,31 +23,29 @@
     <div class="row">
         <div class="form-group col-md-6">
           <label for="nit">NIT</label>
-          <input class="form-control form-control-sm" type="text" id="nit" name="nit" placeholder="NIT">
+          <input class="form-control form-control-sm" type="text" id="nit" name="nit" 
+          placeholder="NIT" value="{{ old('nit') }}">
           @error('nit')<span class="error invalid-feedback">{{ $message }}</span>@enderror
         </div>
         <div class="form-group col-md-6">
             <label>Rason Social</label>
-            <input class="form-control form-control-sm" type="text" name="name" placeholder="Razon Social">
+            <input class="form-control form-control-sm" type="text" name="name" 
+            placeholder="Razon Social" value="{{ old('name') }}">
             @error('name')<span class="error invalid-feedback">{{ $message }}</span>@enderror
         </div>
     </div>
     <div class="row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-12">
             <label>Dirección</label>
-            <input class="form-control form-control-sm" type="text" name="address" placeholder="Dirección ESE">
+            <input class="form-control form-control-sm" type="text" name="address" 
+            placeholder="Dirección ESE"  value="{{ old('address') }}">
             @error('addres')<span class="error invalid-feedback">{{ $message }}</span>@enderror
-        </div>
-        <div class="form-group col-md-6">
-            <label>Imagen</label>
-            <input class="form-control form-control-sm" type="text" name="logo" placeholder="archivo image">
-            @error('logo')<span class="error invalid-feedback">{{ $message }}</span>@enderror
         </div>
     </div>
     </div>
     <!-- /.card-body -->
 
-    <div class="card-footer">
+    <div class="box-footer">
       <button type="submit" class="btn btn-primary">Guardar</button>
     </div>
   </form>

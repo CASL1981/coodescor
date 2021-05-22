@@ -11,7 +11,7 @@ class Noticia extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'url', 'excerpt', 'body', 'published_at', 'category_id'];
+    protected $fillable = ['title', 'url', 'excerpt', 'body', 'published_at', 'category_news_id', 'user_id'];
 
     protected $dates = ['published_at'];
 
@@ -47,10 +47,11 @@ class Noticia extends Model
                 ->orderBy('published_at', 'DESC');
     }
 
-    public function setNameAttribute($title)
+    public function setTitleAttribute($title)
     {
         $this->attributes['title'] = $title;
         $this->attributes['url'] = Str::slug($title);
+        // $this->attributes['user_id'] = auth()->user()->id;
     }
 
     public function setPublishedAtAttribute($published_at)

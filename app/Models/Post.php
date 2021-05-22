@@ -6,13 +6,12 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use phpDocumentor\Reflection\Types\Boolean;
 
 class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'url', 'excerpt', 'body', 'published_at', 'category_id'];
+    protected $fillable = ['title', 'url', 'excerpt', 'body', 'published_at', 'category_id', 'user_id'];
 
     protected $dates = ['published_at'];
 
@@ -62,6 +61,7 @@ class Post extends Model
     {
         $this->attributes['title'] = $title;
         $this->attributes['url'] = Str::slug($title);
+        // $this->attributes['user_id'] = auth()->user()->id;
     }
 
     public function setPublishedAtAttribute($published_at)

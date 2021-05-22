@@ -1,6 +1,6 @@
 <div class="example-modal">
     <div class="modal modal-primary" id="crearPost">
-    <form action="{{ route('posts.store') }}" method="POST">
+    <form action="{{ route('posts.store', '#createpost') }}" method="POST">
         @csrf
       <div class="modal-dialog">
         <div class="modal-content">
@@ -29,3 +29,21 @@
     </div>
     <!-- /.modal -->
 </div>
+
+@push('script')
+  <script>
+    if(window.location.hash === '#createpost')
+    {
+      $('#crearPost').modal('show');
+    };
+
+    $('#crearPost').on('hide.bs.modal', function(){
+      window.location.hash = '#';
+    });
+
+    $('#crearPost').on('shown.bs.modal', function(){
+      $('#post-title').focus();
+      window.location.hash = '#createpost';
+    });
+  </script>
+@endpush

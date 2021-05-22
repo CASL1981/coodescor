@@ -11,7 +11,7 @@
           <p>Publicaciones</p>
         </div>
         <div class="icon">
-          <i class="ion ion-chatbox"></i>
+          <i class="ion ion-chatbubbles"></i>
         </div>
         <a href="{{ route('posts.index') }}" class="small-box-footer">+ Infomación <i class="fa fa-arrow-circle-right"></i></a>
       </div>
@@ -25,7 +25,7 @@
           <p>Noticias</p>
         </div>
         <div class="icon">
-          <i class="ion ion-newspaper-outline"></i>
+          <i class="ion ion-clipboard"></i>
         </div>
         <a href="{{ route('news.index') }}" class="small-box-footer">+ Información <i class="fa fa-arrow-circle-right"></i></a>
       </div>
@@ -35,14 +35,13 @@
       <!-- small box -->
       <div class="small-box bg-yellow">
         <div class="inner">
-          <h3>44</h3>
-
-          <p>User Registrations</p>
+          <h3>{{ $partners->count() }}</h3>
+          <p>Asociados</p>
         </div>
         <div class="icon">
-          <i class="ion ion-person-add"></i>
+          <i class="ion ion-person-stalker"></i>
         </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="{{ route('asociados.index') }}" class="small-box-footer">+ Informmación <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
@@ -50,14 +49,14 @@
       <!-- small box -->
       <div class="small-box bg-red">
         <div class="inner">
-          <h3>65</h3>
+          <h3>{{ $comments->count() }}</h3>
 
-          <p>Unique Visitors</p>
+          <p>Comentarios</p>
         </div>
         <div class="icon">
-          <i class="ion ion-pie-graph"></i>
+          <i class="ion ion-chatbox"></i>
         </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="#" class="small-box-footer">+ Información <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->

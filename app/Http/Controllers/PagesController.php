@@ -61,7 +61,7 @@ class PagesController extends Controller
 
     public function partner()
     {
-        $partners = Partner::where('status', true)->orderBy('order')->get();
+        $partners = Partner::orderBy('order')->get();
 
         return view('pages.partner', compact('partners'));
     }

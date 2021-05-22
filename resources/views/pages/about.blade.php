@@ -1,8 +1,6 @@
 @extends('layouts.web')
 
 @section('page-title', 'COODESCOR | Nosotros')
-	
-@endsection
 
 @section('content')
 
@@ -39,27 +37,21 @@
 				la forma de Administración Pública Cooperativa y dedicada a la gestión de Insumos Hospitalarios Esenciales.</p>
 
 			<div class="row about_grids mt-5 mb-5">
-				<div class="col-lg-4" style="background: #D0e3f5;">
-					{{-- <img src="images/blog1.jpg" alt="" class="img-fluid" /> --}}
+				<div class="col-lg-4" style="background: #D0e3f5;">					
 					<strong><h3 class="mt-3 text-dark text-center">MISIÓN</h3></strong>
-					<p class="my-3">Ofrecemos soluciones integrales en la comercialización y gestión de insumos hospitalarios esenciales que generen un alto valor agregado a nuestros asociados y clientes con adecuado soporte tecnológico y talento humano competente y ético.</p>
-					{{-- <a href="single.html">Read More</a> --}}
+					<p class="my-3 text-justify">Ofrecemos soluciones integrales en la comercialización y gestión de insumos hospitalarios esenciales que generen un alto valor agregado a nuestros asociados y clientes con adecuado soporte tecnológico y talento humano competente y ético.</p>					
 				</div>
 				<div class="col-lg-4 ml-3" style="background: #D0e3f5;">
-					{{-- <img src="images/blog2.jpg" alt="" class="img-fluid" /> --}}
-					<h3 class="mt-3 text-center">VISIÓN</h3>
-					<p class="my-3 text-black">Ser una empresa competitiva y sostenible, reconocida por sus asociados y clientes no asociados  como el principal aliado estratégico que favorece y fortalece la prestación del servicio.</p>
-					{{-- <a href="single.html">Read More</a> --}}
+					<strong><h3 class="mt-3 text-dark text-center">VISIÓN</h3></strong>
+					<p class="my-3 text-justify">Ser una empresa competitiva y sostenible, reconocida por sus asociados y clientes no asociados  como el principal aliado estratégico que favorece y fortalece la prestación del servicio.</p>					
 				</div>
 				<div class="col-lg-3 ml-3" style="background: #D0e3f5;">
-					{{-- <img src="images/blog3.jpg" alt="" class="img-fluid" /> --}}
-					<h3 class="mt-3 text-center">VALORES</h3>
+					<strong><h3 class="mt-3 text-dark text-center">VALORES</h3></strong>
 					<p >Responsabilidad</p>
 					<p >Compromiso</p>
 					<p >Transparencia</p>
 					<p >Solidaridad</p>
-					<p >Ética</p>
-					{{-- <a href="single.html">Read More</a> --}}
+					<p >Ética</p>					
 				</div>
 			</div>
 		</div>
@@ -98,6 +90,7 @@
 					<h6 class="mt-3">Farmacias Monteria</h6>
 					<h6 class="mt-3">Farmacia Planeta Rica</h6>
 					<h6 class="mt-3">farmacia San Antero</h6>
+					<h6 class="mt-3">farmacia San Pelayo</h6>
 
 					<h4 class="my-4 font-italic">Cum sociis natoque penatibus et magnis dis parturient montesmus, Proin vel nibh et
 						elit mollis commodo et nec augue
@@ -113,174 +106,6 @@
 		</div>
 	</div>
 	<!-- //middle section -->
-
-	<!-- team -->
-	{{-- <section class="team py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="w3ls-titles text-center mb-5">
-				<h3 class="title">Our Doctors</h3>
-				<span>
-					<i class="fas fa-user-md"></i>
-				</span>
-				<p class="mt-2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div class="row inner-sec-w3layouts-agileinfo">
-				<div class="col-md-4 team-grids text-center">
-					<img src="images/t1.jpg" class="img-fluid" alt="">
-					<div class="team-info">
-						<div class="caption">
-							<h4>John Doe</h4>
-							<h6>Doctor 1</h6>
-						</div>
-						<div class="social-icons-section">
-							<a class="fac" href="#">
-								<i class="fab fa-facebook"></i>
-							</a>
-							<a class="twitter" href="#">
-								<i class="fab fa-twitter-square"></i>
-							</a>
-							<a class="pinterest" href="#">
-								<i class="fab fa-pinterest"></i>
-							</a>
-
-						</div>
-
-					</div>
-				</div>
-				<div class="col-md-4 team-grids my-md-0 my-4 text-center">
-					<img src="images/t3.jpg" class="img-fluid" alt="">
-					<div class="team-info">
-						<div class="caption">
-							<h4>Adam Lobster</h4>
-							<h6>Doctor 2</h6>
-						</div>
-						<div class="social-icons-section">
-							<a class="fac" href="#">
-								<i class="fab fa-facebook"></i>
-							</a>
-							<a class="twitter" href="#">
-								<i class="fab fa-twitter-square"></i>
-							</a>
-							<a class="pinterest" href="#">
-								<i class="fab fa-pinterest"></i>
-							</a>
-
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 team-grids text-center">
-					<img src="images/t4.jpg" class="img-fluid" alt="">
-					<div class="team-info">
-						<div class="caption">
-							<h4>Christina </h4>
-							<h6>Doctor 3</h6>
-						</div>
-						<div class="social-icons-section">
-							<a class="fac" href="#">
-								<i class="fab fa-facebook"></i>
-							</a>
-							<a class="twitter" href="#">
-								<i class="fab fa-twitter-square"></i>
-							</a>
-							<a class="pinterest" href="#">
-								<i class="fab fa-pinterest"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> --}}
-	<!-- team -->
-
-
-	<!-- services -->
-	{{-- <div class="why-choose-agile" id="services">
-		<div class="container pt-xl-5 pt-lg-3">
-			<div class="w3ls-titles text-center mb-5">
-				<h3 class="title">Nuestros Servicios</h3>
-				<span>
-					<i class="fas fa-user-md"></i>
-				</span>
-				<!-- <p class="mt-2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-			</div>
-			<div class="row why-choose-agile-grids-top">
-				<div class="col-lg-4 agileits-w3layouts-grid">
-					<div class="row wthree_agile_us">
-						<div class="col-3 agile-why-text p-0 text-right">
-							<div class="wthree_features_grid">
-								<i class="fas fa-user-md"></i>
-							</div>
-						</div>
-						<div class="col-9 agile-why-text-2">
-							<h4 class="text-dark font-weight-bold mb-3">Administración de Servicios Farmaceuticos</h4>
-							<p>Lorem ipsum magna, vehicula ut porta ete.</p>
-						</div>
-					</div>
-					<div class="row wthree_agile_us my-5">
-						<div class="col-3 agile-why-text p-0 text-right">
-							<div class="wthree_features_grid">
-								<i class="fas fa-syringe"></i>
-							</div>
-						</div>
-						<div class="col-9 agile-why-text-2">
-							<h4 class="text-dark font-weight-bold mb-3">Seguimiento Farmacoterapeuticos</h4>
-							<p>Lorem ipsum magna, vehicula ut porta ete.</p>
-						</div>
-					</div>
-					<!-- <div class="row wthree_agile_us">
-						<div class="col-3 agile-why-text p-0 text-right">
-							<div class="wthree_features_grid">
-								<i class="fab fa-medrt"></i>
-							</div>
-						</div>
-						<div class="col-9 agile-why-text-2">
-							<h4 class="text-dark font-weight-bold mb-3">Medical Treatment</h4>
-							<p>Lorem ipsum magna, vehicula ut porta ete.</p>
-						</div>
-					</div> -->
-				</div>
-				<div class="col-lg-4 agileits-w3layouts-grid img text-center">
-					<img src="images/b3.png" alt=" " class="img-fluid" />
-				</div>
-				<div class="col-lg-4 agileits-w3layouts-grid">
-					<div class="row wthree_agile_us">
-						<div class="col-9 agile-why-text-2">
-							<h4 class="text-dark font-weight-bold mb-3">SISMED</h4>
-							<p>Lorem ipsum magna, vehicula ut porta ete.</p>
-						</div>
-						<div class="col-3 agile-why-text p-0">
-							<div class="wthree_features_grid">
-								<i class="fas fa-medkit"></i>
-							</div>
-						</div>
-					</div>
-					<div class="row wthree_agile_us my-5">
-						<div class="col-9 agile-why-text-2">
-							<h4 class="text-dark font-weight-bold mb-3">Venta Medicamentos y Dispositivos Medicos</h4>
-							<p>Lorem ipsum magna, vehicula ut porta ete.</p>
-						</div>
-						<div class="col-3 agile-why-text p-0">
-							<div class="wthree_features_grid">
-								<i class="fas fa-wheelchair"></i>
-							</div>
-						</div>
-					</div>
-					<!-- <div class="row wthree_agile_us">
-						<div class="col-9 agile-why-text-2">
-							<h4 class="text-dark font-weight-bold mb-3">Laboratory</h4>
-							<p>Lorem ipsum magna, vehicula ut porta ete.</p>
-						</div>
-						<div class="col-3 agile-why-text p-0">
-							<div class="wthree_features_grid">
-								<i class="fas fa-hospital"></i>
-							</div>
-						</div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-	</div> --}}
 
 	@include('partials.services')
 	<!-- //services -->

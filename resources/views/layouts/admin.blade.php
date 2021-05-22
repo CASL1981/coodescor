@@ -157,12 +157,10 @@ desired effect
           <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i><span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li {{ request()->is('admin/posts/create') ? 'class=active' : '' }} >
-              @if (request()->is('admin/posts/*'))
-                <a href="{{ route('posts.index', '#createpost') }}" data-toggle="modal" data-target="#crearPost">
-                <i class="fa fa-plus-circle"></i>Crear Publicación</a>                  
+              @if (request()->routeIs('posts.edit'))
+                <a href="{{ route('posts.index', '#createpost') }}"><i class="fa fa-plus-circle"></i>Crear Publicación</a>
               @else
-                <a href="#" data-toggle="modal" data-target="#crearPost">
-                <i class="fa fa-plus-circle"></i>Crear Publicación</a>                  
+                <a href="#" data-toggle="modal" data-target="#crearPost"><i class="fa fa-plus-circle"></i>Crear Publicación</a>
               @endif
             </li>
             <li {{ request()->is('admin/posts') ? 'class=active' : '' }} ><a href="{{ route('posts.index') }}">
@@ -174,8 +172,11 @@ desired effect
           <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Noticias</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li {{ request()->is('admin/news/create') ? 'class=active' : '' }} >
-              <a href="#" data-toggle="modal" data-target="#crearNews">
-              <i class="fa fa-plus-circle"></i>Crear Noticia</a>
+              @if (request()->routeIs('news.edit'))
+                <a href="{{ route('news.index', '#createnews') }}"><i class="fa fa-plus-circle"></i>Crear Noticia</a>                  
+              @else
+                <a href="#" data-toggle="modal" data-target="#crearNews"><i class="fa fa-plus-circle"></i>Crear Noticia</a>                  
+              @endif
             </li>
             <li {{ request()->is('admin/news') ? 'class=active' : '' }} ><a href="{{ route('news.index') }}">
               <i class="fa fa-eye"></i>Ver todas las Noticias</a>
@@ -234,36 +235,17 @@ desired effect
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 
+@unless (request()->routeIs('posts.edit'))
+  @include('administrator.blog.create')  
+@endunless
+
+@unless (request()->routeIs('news.edit'))
+  @include('administrator.news.create')    
+@endunless
 @stack('script')
 
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/app.min.js') }}"></script>
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. Slimscroll is required when using the
-     fixed layout. -->
-
-@include('administrator.blog.create')
-@include('administrator.news.create')
-
-{{ dd(request()->routeIs('posts.index')) }}
-
-  {{-- <script>
-    if(window.location.hash === '#createpost')
-    {
-      $('#crearPost').modal('show');
-    };
-
-    $('#crearPost').on('hide.bs.modal', function(){
-      window.location.hash = '#';
-    });
-
-    $('#crearPost').on('shown.bs.modal', function(){
-      $('#post-title').focus();
-      window.location.hash = '#crearPost';
-    });
-  </script>     --}}
 
 </body>
 </html>
