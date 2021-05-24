@@ -56,7 +56,7 @@
         <div class="icon">
           <i class="ion ion-chatbox"></i>
         </div>
-        <a href="#" class="small-box-footer">+ Información <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="{{ route('comments.index') }}" class="small-box-footer">+ Información <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->

@@ -61,7 +61,6 @@ class Post extends Model
     {
         $this->attributes['title'] = $title;
         $this->attributes['url'] = Str::slug($title);
-        // $this->attributes['user_id'] = auth()->user()->id;
     }
 
     public function setPublishedAtAttribute($published_at)

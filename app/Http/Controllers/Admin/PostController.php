@@ -51,6 +51,7 @@ class PostController extends Controller
         
         $post = Post::create([
             'title' => $request->title,
+            'user_id' => auth()->id,
         ]);
         
         return redirect()->route('posts.edit', $post);

@@ -15,7 +15,9 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = comment::orderBy('created_at', 'DESC')->get();
+
+        return view('administrator.comments.index', compact('comments'));
     }
 
     /**
@@ -67,9 +69,9 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(comment $comment)
     {
-        //
+        return view('administrator.comments.edit', compact('comment'));
     }
 
     /**
@@ -79,9 +81,18 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, comment $comment)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:192',
+            'email' => 'required|email|max:192',
+            'subject' => 'required|max:192',
+            'message' => 'required',
+        ]);
+
+        $comment->update($request->all());
+
+        return redirect()->back()->with('success', 'Comentario actualizado');
     }
 
     /**

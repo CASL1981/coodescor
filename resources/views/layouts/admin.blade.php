@@ -98,7 +98,7 @@ desired effect
               </li>
               <!-- Menu Body -->
               <li class="user-body">
-                <div class="row">
+                {{-- <div class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
                   </div>
@@ -108,24 +108,25 @@ desired effect
                   <div class="col-xs-4 text-center">
                     <a href="#">Friends</a>
                   </div>
-                </div>
+                </div> --}}
                 <!-- /.row -->
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                {{-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
+                </div> --}}
+                <form action="{{ route('logout') }}" method="POST">
+                  @csrf
+                  <button class="btn btn-default btn-flat btn-block">Cerrar sesión</button>                
+                </form>
               </li>
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
+          {{-- <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
+          </li> --}}
         </ul>
       </div>
     </nav>
@@ -144,7 +145,7 @@ desired effect
         <div class="pull-left info">
           <p>{{ auth()->user()->name }}</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          {{-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> --}}
         </div>
       </div>
 
@@ -152,7 +153,7 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">Panel</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Panel de Inicio</span></a></li>
+        <li class="{{ request()->is('dashboard') ? 'active' : '' }}"><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Panel de Inicio</span></a></li>
         <li class="treeview {{ request()->is('admin/posts*') ? 'active' : '' }}">
           <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i><span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
@@ -194,6 +195,7 @@ desired effect
             </li>
           </ul>
         </li>
+        <li class="{{ request()->is('comments') ? 'active' : '' }}"><a href="{{ route('comments.index') }}"><i class="fa fa-commenting-o"></i> <span>Comentarios</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

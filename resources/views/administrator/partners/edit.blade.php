@@ -62,7 +62,7 @@
         <div class="form-group col-md-2">
             <label>Orden</label>
             <input class="form-control form-control-sm" type="number" name="order" value="{{ $partner->order }}" min="0">
-            @error('addres')<span class="error invalid-feedback">{{ $message }}</span>@enderror
+            @error('order')<span class="error invalid-feedback">{{ $message }}</span>@enderror
         </div>
         <div class="form-group col-md-4">
             <div class="dropzone"></div>

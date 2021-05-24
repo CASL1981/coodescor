@@ -65,6 +65,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::put('news/{partner}', [PartnerController::class, 'delete'])->name('admin.partner.logo.update');
     Route::resource('posts', PostController::class);
     Route::resource('news', NoticiaController::class);
+    Route::resource('comments', CommentController::class)->except(['store', 'show']);
     Route::post('posts/{post}/photos', [PhotoController::class, 'store'])->name('admin.post.photos');
     Route::put('photos/{post}', [PhotoController::class, 'destroy'])->name('admin.photos.update');
     Route::post('news/{news}/photos', [PhotoController::class, 'storeNews'])->name('admin.news.photos');

@@ -50,7 +50,7 @@ class NoticiaController extends Controller
         
         $news = Noticia::create([
             'title' => $request->title,
-            'url' => Str::slug($request->title),
+            'user:id' => auth()->id,
         ]);
         
         return redirect()->route('news.edit', $news);
