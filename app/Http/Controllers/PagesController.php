@@ -48,7 +48,7 @@ class PagesController extends Controller
 
     public function news(Noticia $news)
     {       
-        $categories = Category::all();        
+        $categories = CategoryNews::all();
         $recentnews = Noticia::published()->latest()->take(3)->get();
 
         return view('pages.news', compact('news','categories', 'recentnews'));

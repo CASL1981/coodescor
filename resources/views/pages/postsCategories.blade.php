@@ -17,7 +17,7 @@
                         </li>
                         <li class="mx-2">
                             <a href="#">
-                            <i class="far fa-comment"></i> 21</a>
+                            <i class="far fa-comment"></i> {{ $post->Comments()->count() }}</a>
                         </li>
                     </ul>
                     <h5 class="card-title ">

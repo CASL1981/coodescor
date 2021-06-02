@@ -5,7 +5,7 @@
         </div>
         <div class="tech-btm">
             <h4>Categorias</h4>
-            <ul class="list-group single">
+            <ul class="list-group single">                
                 @foreach ($categories as $category)
                     <a href="{{ route('news.categories.show', $category) }}">
                         <li class="list-group-item d-flex justify-content-between align-items-center">

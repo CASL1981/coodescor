@@ -61,8 +61,8 @@ require __DIR__.'/auth.php';
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('asociados', PartnerController::class);
-    Route::post('news/{partner}/logo', [PartnerController::class, 'logo'])->name('admin.partner.logo');
-    Route::put('news/{partner}', [PartnerController::class, 'delete'])->name('admin.partner.logo.update');
+    Route::post('asociado/{partner}/logo', [PartnerController::class, 'logo'])->name('admin.partner.logo');
+    Route::put('asociado/{partner}', [PartnerController::class, 'delete'])->name('admin.partner.logo.update');
     Route::resource('posts', PostController::class);
     Route::resource('news', NoticiaController::class);
     Route::resource('comments', CommentController::class)->except(['store', 'show']);

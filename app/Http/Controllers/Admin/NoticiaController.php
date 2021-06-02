@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\storeNewsRequest;
 use App\Models\Category;
+use App\Models\CategoryNews;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -75,7 +76,7 @@ class NoticiaController extends Controller
      */
     public function edit(Noticia $news)
     {
-        $categories = Category::all();
+        $categories = CategoryNews::all();
 
         return view('administrator.news.edit', compact('categories', 'news'));
     }

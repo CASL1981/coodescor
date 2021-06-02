@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\comment;
+use App\Models\CategoryNews;
 use App\Models\Noticia;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -20,6 +20,19 @@ class NoticiasTableSeeder extends Seeder
     {
         Storage::disk('local')->deleteDirectory('noticias');
         Noticia::truncate();
+        CategoryNews::truncate();
+
+        $category = new CategoryNews();
+        $category->name = "Asociados News";
+        $category->save();
+
+        $category = new CategoryNews();
+        $category->name = "Comunidad News";
+        $category->save();
+
+        $category = new CategoryNews();
+        $category->name = "Salud News";
+        $category->save();
 
         $post = new Noticia();
         $post->title = "PACIENTES CON DIABETES DE TIPO 2 TIENEN ANOMALÍAS IMPORTANTES EN EL ELECTROCARDIOGRAMA";

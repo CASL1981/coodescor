@@ -21,6 +21,7 @@
     <link href="{{ asset('css/blog/app.css') }}" rel='stylesheet' type='text/css' />
     <link href="{{ asset('css/fontawesome.all.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    {!! htmlScriptTagJsApi(['lang' => 'es']) !!}
 </head>
 
 <body>

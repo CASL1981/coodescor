@@ -22,6 +22,11 @@ class Category extends Model
         return $this->hasMany(Post::class);
     }
 
+    public function News()
+    {
+        return $this->hasMany(Noticia::class, 'category_news_id');
+    }
+
     public function setNameAttribute($name)
     {
         $this->attributes['name'] = $name;

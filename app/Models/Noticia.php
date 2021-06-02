@@ -58,9 +58,9 @@ class Noticia extends Model
         $this->attributes['published_at'] = $published_at ? Carbon::parse($published_at) : null;
     }
 
-    public function setCategoryIdAttribute($category_id)
+    public function setCategoryIdAttribute($category_news_id)
     {
-        $this->attributes['category_id'] = Category::find($category_id) ? $category_id : Category::create(['name' => $category_id])->id;
+        $this->attributes['category_news_id'] = CategoryNews::find($category_news_id) ? $category_news_id : Category::create(['name' => $category_news_id])->id;
     }
 
     public function syncTags($tags)

@@ -50,6 +50,7 @@
                     <textarea class="form-control" name="message" placeholder="Mensage..." required=""></textarea>
                     {!! $errors->first('message', '<span class="help-block">:message</span>') !!}
                     <input type="text" name="post_id" value="{{ $post->id }}" hidden="true">
+                    {!! htmlFormSnippet() !!}
                     <button type="submit" class="btn btn-primary submit">Enviar</button>
                 </form>
             </div>

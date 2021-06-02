@@ -88,6 +88,7 @@ class CommentController extends Controller
             'email' => 'required|email|max:192',
             'subject' => 'required|max:192',
             'message' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
         ]);
 
         $comment->update($request->all());
